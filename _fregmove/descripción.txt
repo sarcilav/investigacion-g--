@@ -3,3 +3,5 @@ es útil para máquinas que usan instrucciones de dos operandos.
 
 -foptimize-register-move tiene la misma función
 
+lo ensayé con código lleno de funciones, con recursión, con dfs y recursión, con 
+ciclos gigantes, y con un codigo que no cambiaba dentro un ciclo.

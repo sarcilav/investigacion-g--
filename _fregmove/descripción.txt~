@@ -1,2 +1,5 @@
 Trata de asignar el número de registro en las instrucciones de movimiento.
 es útil para máquinas que usan instrucciones de dos operandos.
+
+-foptimize-register-move tiene la misma función
+

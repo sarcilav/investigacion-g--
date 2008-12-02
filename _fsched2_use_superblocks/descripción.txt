@@ -1,0 +1,4 @@
+Lo que esta opción permite es realizar el schedule de forma más rápida haciendo
+todo por superbloques.
+El algoritmo que usa esta opción, en la versión de gcc actual, puede no funcionar
+o no arrojar resultados óptimos en algunas arquitecturas.

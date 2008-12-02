@@ -1,0 +1,2 @@
+En principio es el uso del mismo algoritmo de schedule usado para superbloques,
+con la diferencia que esta opción usa además el -ftracer, para duplicar código.

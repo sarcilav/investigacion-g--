@@ -1,0 +1,4 @@
+Se ejecuta esta opción para mejorar el acceso a las funciones, estas se organizan
+en base al uso que puedan tener.
+Para esta opción se deben tener activadas opciones de perfiles de compilación.
+como -fprofile-arcs y demás.

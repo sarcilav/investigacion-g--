@@ -1,0 +1,5 @@
+Esta opción se usa como un seguro, no permite que posteriores revisiones para hacer
+'schedule' modifiquen lo que ya se había hecho en los ciclos.
+
+Estos schedule que se necesitan en diferentes etapas requieren como en los
+profilers hacer, más compilaciones.

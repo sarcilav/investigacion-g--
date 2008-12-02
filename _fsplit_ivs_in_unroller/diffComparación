@@ -1,0 +1,67 @@
+	.file	"sample3.cpp"						.file	"sample3.cpp"
+	.text								.text
+	.align 2							.align 2
+.globl _Z4sumaii						.globl _Z4sumaii
+	.type	_Z4sumaii, @function					.type	_Z4sumaii, @function
+_Z4sumaii:							_Z4sumaii:
+.LFB2:								.LFB2:
+	pushl	%ebp							pushl	%ebp
+.LCFI0:								.LCFI0:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI1:								.LCFI1:
+	popl	%ebp							popl	%ebp
+	ret								ret
+.LFE2:								.LFE2:
+	.size	_Z4sumaii, .-_Z4sumaii					.size	_Z4sumaii, .-_Z4sumaii
+.globl __gxx_personality_v0					.globl __gxx_personality_v0
+	.align 2							.align 2
+.globl _Z14multiplicacionii					.globl _Z14multiplicacionii
+	.type	_Z14multiplicacionii, @function				.type	_Z14multiplicacionii, @function
+_Z14multiplicacionii:						_Z14multiplicacionii:
+.LFB3:								.LFB3:
+	pushl	%ebp							pushl	%ebp
+.LCFI2:								.LCFI2:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI3:								.LCFI3:
+	popl	%ebp							popl	%ebp
+	ret								ret
+.LFE3:								.LFE3:
+	.size	_Z14multiplicacionii, .-_Z14multiplicacionii		.size	_Z14multiplicacionii, .-_Z14multiplicacionii
+	.align 2							.align 2
+.globl main							.globl main
+	.type	main, @function						.type	main, @function
+main:								main:
+.LFB4:								.LFB4:
+	leal	4(%esp), %ecx						leal	4(%esp), %ecx
+.LCFI4:								.LCFI4:
+	andl	$-16, %esp						andl	$-16, %esp
+	pushl	-4(%ecx)						pushl	-4(%ecx)
+.LCFI5:								.LCFI5:
+	pushl	%ebp							pushl	%ebp
+.LCFI6:								.LCFI6:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI7:								.LCFI7:
+	pushl	%ecx							pushl	%ecx
+.LCFI8:								.LCFI8:
+	movl	$0, %eax						movl	$0, %eax
+.L6:								.L6:
+	movl	%eax, arreglo(,%eax,4)					movl	%eax, arreglo(,%eax,4)
+	addl	$1, %eax						addl	$1, %eax
+	cmpl	$10000, %eax						cmpl	$10000, %eax
+	jne	.L6							jne	.L6
+	movw	$0, %ax							movw	$0, %ax
+	popl	%ecx							popl	%ecx
+	popl	%ebp							popl	%ebp
+	leal	-4(%ecx), %esp						leal	-4(%ecx), %esp
+	ret								ret
+.LFE4:								.LFE4:
+	.size	main, .-main						.size	main, .-main
+.globl arreglo							.globl arreglo
+	.bss								.bss
+	.align 32							.align 32
+	.type	arreglo, @object					.type	arreglo, @object
+	.size	arreglo, 40000						.size	arreglo, 40000
+arreglo:							arreglo:
+	.zero	40000							.zero	40000
+	.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"		.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"
+	.section	.note.GNU-stack,"",@progbits			.section	.note.GNU-stack,"",@progbits
