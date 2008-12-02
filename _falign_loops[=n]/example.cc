@@ -1,6 +1,6 @@
 int init()
 {
-  const int a=1000000;
+  const int a=100000;
   int res=0;
   for(int i=0;i<a;++i)
     {
