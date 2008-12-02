@@ -1,0 +1,1 @@
+Similar a '-fstack-protector', pero protege todas las funciones.

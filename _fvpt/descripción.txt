@@ -1,0 +1,3 @@
+Se usa en conjunto con '-fprofile-arcs' '-fbranch-probabilities' y usa la información que estos entregan para realizar la optimización.
+No realiza optimización por si solo, sino que actúa como 'booster', con '-fprofile-arcs' le pide al compilador que genere un código especial para reunir información de los valores de las expresiones.
+Con '-fbranch-probabilities'

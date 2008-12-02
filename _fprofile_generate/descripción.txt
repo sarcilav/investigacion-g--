@@ -1,0 +1,5 @@
+Activa un paquete de opciones que por lo general se utilizan para
+indicar la creación de perfiles de ejecución. Estos perfiles contienen información que el
+compilador puede utilizar para realizar optimizaciones adicionales una vez corrido el
+programa y analizada su ejecución.
+

@@ -1,0 +1,6 @@
+Permite de alguna forma que los tipos de datos similares compartan direcciones de
+memoria.
+
+Eso se daría en tipos de datos 'contenedores', por ejemplo un int en un double.
+en 'sample' trato de sacar el int del double.
+no sirvió. (El ejemplo tal cual del manual gcc)

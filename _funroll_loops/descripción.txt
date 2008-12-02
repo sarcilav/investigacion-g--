@@ -1,0 +1,11 @@
+Esta opción 'desenrolla' un ciclo siempre y cuando pueda conocer el número de iteraciones en el momento de compilar o cuando se entre en el ciclo.
+El desenrollar un ciclo significa generar código más extenso ya que basicamente es poner el contenido del ciclo uno tras otro dependiendo del número de iteraciones 
+y no se garantiza que se ejecute más rápido.
+
+Desenrolla los loops cuya cantidad de iteraciones se conozca en tiempo
+de compilación. Agranda el tamaño del ejecutable y es posible que en realidad no haga correr
+más rápido a un programa.
+
+Nota:Investigar bien como afectan a esta opción las opciones param max-unroll-times y param max-unrolled-
+insns
+

@@ -1,0 +1,3 @@
+Desactiva las optimizaciones que asumen redondeo de números
+flotantes. Experimental, no sé garantiza que desactiva todas estas optimizaciones.
+

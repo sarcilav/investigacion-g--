@@ -1,0 +1,3 @@
+Optimiza el uso de registros del procesador, asegurándose de que no
+quede ningún registro sin utilizarse.
+

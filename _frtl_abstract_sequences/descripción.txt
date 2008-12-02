@@ -1,0 +1,4 @@
+Encuentra pedazos de código idénticos y los copia a una
+función invocada cada vez que se requiere dicho pedazo de código. Saca 'factor común' de una
+función. Optimiza el tamaño del ejecutable.
+

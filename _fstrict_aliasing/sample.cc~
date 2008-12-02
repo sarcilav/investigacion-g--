@@ -1,0 +1,14 @@
+/*Template.cc*/
+#include<cstdio>
+using namespace std;
+  union theunion{
+  int a ;
+  double b;
+};
+
+int main () {	
+theunion c;	
+	c.b=3.	1415;
+  printf("%d",	c.a);
+  return 0;		
+}

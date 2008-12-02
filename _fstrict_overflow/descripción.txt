@@ -1,0 +1,15 @@
+El compilador asume que no habrá overflows. Esto optimiza el código de
+modo que no sea necesario revisar si se produjo un overflow después de cada operación.
+
+
+No hay ningún cambio para sample3
+tiempos
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+
+Para sample32 se tienen los mismos tiempos

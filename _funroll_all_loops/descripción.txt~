@@ -1,0 +1,2 @@
+Esta opción desenrolla los ciclos haciendo el código más extenso y probablemente haciendolos más lentos en ejecución.
+La diferencia que tiene con 'funroll-loops' es que se aplica también en los ciclos de los cuales no se conce el número de iteraciones.

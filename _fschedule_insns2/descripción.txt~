@@ -1,0 +1,6 @@
+Esta opción lo que hace es determinar cuando se necesita una operación de punto
+flotante o una carga de memoria para tenerla lista en el momento preciso.
+lo que elimina el tiempo de espera mientras esta se carga.
+muy útil en máquinas con tiempos de carga y operación de punto flotante lento.
+esta opción a diferencia de la primera recibe un parámetro que indica los registros
+que ya han sido asignados.

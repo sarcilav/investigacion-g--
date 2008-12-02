@@ -1,0 +1,7 @@
+Saca las 'ramas' de código que tienen condiciones de ciclo invariante, fuera del ciclo principal, manteniendo una copia.
+
+NS/NR Servirá para ejecutar la que sea más conveniente.
+
+Saca las ramas de un ciclo que no varían según la iteración del ciclo en
+el que se encuentran.
+

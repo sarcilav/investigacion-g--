@@ -1,0 +1,17 @@
+
+
+
+los tiempos para determinar dos casos simples de bicoloreo de un grafo usando dfs
+son con optimización.
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+y sin la optimización.
+real	0m0.003s
+user	0m0.000s
+sys	0m0.000s
+
+cambio en tiempo que no es relevante.
+el tamaño del código es el mismo
+

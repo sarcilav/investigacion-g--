@@ -1,0 +1,21 @@
+Saca las 'ramas' de código que tienen condiciones de ciclo invariante, fuera del ciclo principal, manteniendo una copia.
+
+NS/NR Servirá para ejecutar la que sea más conveniente.
+
+Saca las ramas de un ciclo que no varían según la iteración del ciclo en
+el que se encuentran.
+
+conOp
+
+real	0m0.003s
+user	0m0.000s
+sys	0m0.000s
+
+y sinOp
+
+real	0m0.003s
+user	0m0.004s
+sys	0m0.000s
+
+lo cual con 10000 iteraciones del ciclo, no muestra gran cambio en el tiempo de ejecución
+el tamaño del código es el mismo.

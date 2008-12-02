@@ -1,0 +1,3 @@
+Esta opción reordena los bloques de funciones de tal forma que cuando
+se pasa a asembler reducir el numero de branches (saltos). Es posible usar con -O2, -O3.
+

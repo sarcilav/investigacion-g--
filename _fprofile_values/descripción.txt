@@ -1,0 +1,12 @@
+esta opción se activa con -fprofile-generate y con -fprofile-use.
+
+Se debe usar acompañada de otra optimización, ya sea con -fprofile-arcs para 
+crear un banco de datos sobre cada expresión que se encuentra.
+
+y luego con -fbranch-probabilities se recupera la información obtenida sobre las
+expresiones y agrega notas de REG_VALUE_PROFILE que serán usadas después para 
+la optimización.
+
+
+
+NS/NR: ¿REG_VALUE_PROFILE?

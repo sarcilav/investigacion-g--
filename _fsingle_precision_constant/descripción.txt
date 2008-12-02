@@ -1,0 +1,3 @@
+Trata las constantes numéricas de poca precisión como float
+y no cómo double
+

@@ -1,0 +1,3 @@
+Mueve las funciones de en el archivo de asembler o en los .o de forma tal que que
+se vuelva más eficiente el uso de la cache.
+es como indexar de forma ágil las funciones para que sea rápido recuperarlas.

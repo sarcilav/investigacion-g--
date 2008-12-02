@@ -1,0 +1,3 @@
+Realiza algún tipo de optimización con el fin de evitar recalcular
+direcciones de memoria de variables.
+

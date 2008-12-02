@@ -1,0 +1,11 @@
+Permite optimizaciones en aritmética de punto flotante, con dos condiciones.
+- Los valores con los que se va a trabajar son correctos.
+- Se puede ir en contra de las reglas establecidas por los estándares IEEE y ANSI.
+Al hacerse esta optimización se pueden adicionar archivos e incluir librerías que cambien el FPU (¿?)
+La opción no se debe activar con ninguna -O ya que puede quedar comprometida la salida que dependa de estándares ISO o IEEE.
+La opción por lo general está desactivada.
+
+
+                                    Activa optimización de aritmética de números de punto
+flotante. Puede violar el estándar de funciones matemáticas.
+

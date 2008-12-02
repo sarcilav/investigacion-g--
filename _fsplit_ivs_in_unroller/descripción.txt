@@ -1,0 +1,3 @@
+Lo que entiendo es que va guardando el valor de la última iteración y no toda la
+cadena que guarda, todos los estados, como cuando se guarda el estado de las 
+variables en el momento de hacer una recursión

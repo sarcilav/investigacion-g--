@@ -1,0 +1,28 @@
+	.file	"sample3.cc"						.file	"sample3.cc"
+	.text								.text
+	.align 2							.align 2
+.globl main							.globl main
+	.type	main, @function						.type	main, @function
+main:								main:
+.LFB2:								.LFB2:
+	leal	4(%esp), %ecx						leal	4(%esp), %ecx
+.LCFI0:								.LCFI0:
+	andl	$-16, %esp						andl	$-16, %esp
+	pushl	-4(%ecx)						pushl	-4(%ecx)
+.LCFI1:								.LCFI1:
+	pushl	%ebp							pushl	%ebp
+.LCFI2:								.LCFI2:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI3:								.LCFI3:
+	pushl	%ecx							pushl	%ecx
+.LCFI4:								.LCFI4:
+	movl	$0, %eax						movl	$0, %eax
+	popl	%ecx							popl	%ecx
+	popl	%ebp							popl	%ebp
+	leal	-4(%ecx), %esp						leal	-4(%ecx), %esp
+	ret								ret
+.LFE2:								.LFE2:
+	.size	main, .-main						.size	main, .-main
+.globl __gxx_personality_v0					.globl __gxx_personality_v0
+	.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"		.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"
+	.section	.note.GNU-stack,"",@progbits			.section	.note.GNU-stack,"",@progbits

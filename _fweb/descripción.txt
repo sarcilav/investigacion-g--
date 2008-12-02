@@ -1,0 +1,5 @@
+No usa la asignación en registros, sino que usa una 'red' que hace las veces de registro, por eso no se trabaja sobre los registros directamente.
+Eso ayuda a optimizaciones como las loops, CSE, y las que eliminan código muerto.
+nota: Las variables no se guardan en el registro normal, en el 'home'
+
+la opción -funroll-loops la activa por defecto.

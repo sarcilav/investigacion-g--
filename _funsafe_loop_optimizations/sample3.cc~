@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+
+int a(int i){return i++;}
+int b(int i){return i*=i;}
+int c(int i){return i/=3;}
+
+int main(){
+  for(int i = 0 ; i < INT_MAX ; ++i)
+    cout<<a(i)+b(i)+c(i)<<endl;
+  return 0;
+}

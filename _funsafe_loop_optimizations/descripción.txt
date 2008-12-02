@@ -1,0 +1,22 @@
+Con las optimizaciones de '-unsafe', lo que se le dice al compilador es que puede 'confiar' en el código.
+Para la 'unsafe-loop-optimizations' se activan varias optimizaciones de ciclos que actuan basandose en las hipótesis
+de que los ciclos no puedan ser infinitos o de que las condiciones de los ciclos se desborden.
+Aunque esta optimización por si sola no puede determinar si un ciclo va a traer problemas, '-Wunsafe-loop-optimization' indica si
+alguno de los ciclos tiene problema alguno.
+
+NS/NR la -W en los flags determina un 'Warn' (¿?)
+
+
+
+tiempos. con la optimización
+real	0m0.269s
+user	0m0.000s
+sys	0m0.004s
+
+sin la optimización
+real	0m0.305s
+user	0m0.000s
+sys	0m0.000s
+
+
+la variación en el tiempo es mínima, la cual debió ser causada por el procesador ya que el código no tiene cambios.

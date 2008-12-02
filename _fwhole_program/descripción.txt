@@ -1,0 +1,6 @@
+Toma la compilación a realizar como si fuera un programa completo, donde todas las funciones y variables públicas las hace estáticas con excepción del main y de las variables y funciones marcadas con 'externally_visible'.
+
+La optimización es lo mismo que usar static en programas de un solo archivo.
+
+La optimización pone todas las variables y funciones a ser locales para cada compilado del programa, no solo para el compilado generado de cada archivo.
+es como si se creara un 'pool' de variables y funciones que al final se le entregan a cada compilado.

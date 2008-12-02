@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Sergio Botero - 2969.cpp & sample.cpp & funcs.cpp-";
+echo "Optimización $*";
+rm *~;
+g++ sample3.cpp -o conOp.s -S -O $*;
+g++ sample3.cpp -o conOp -O $*;
+g++ sample3.cpp -o sinOp.s -S -O $*;
+g++ sample3.cpp -o sinOp -O $*;
+diff -y conOp.s sinOp.s > diff;
+time ./conOp <entrada >timeCon;
+time ./sinOp <entrada >timeSin;
+diff conOp.s sinOp.s;
+exit

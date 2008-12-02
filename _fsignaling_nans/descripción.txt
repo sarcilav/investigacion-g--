@@ -1,0 +1,3 @@
+Desactiva las optimizaciones que asumen que no se generan traps visibles
+para el usuario. Es experimental, no se garantiza que se desactivan todas estas opciones.
+

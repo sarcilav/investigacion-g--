@@ -1,0 +1,4 @@
+Antes de entrar a la etapa de compilación esta opción lo que hace es revisar todo el código, esto permite aplicar más optimizaciones pero requiere más memoria.
+esta opción no es adecuada si se necesita que el código esté en cierto orden ya que puede cambiar el orden en el que son emitidas funciones, variables y declaraciones de asm.
+elimina funciones y variables estaticas que no están referenciadas.
+

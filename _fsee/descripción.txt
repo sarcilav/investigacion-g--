@@ -1,0 +1,2 @@
+Mueve unas instrucciones hasta el sitio donde serían más convenientes (no estoy
+seguro cuales) usando un tipo de lcm (mínimo común multiplo???)
