@@ -14,3 +14,5 @@ real	0m0.004s
 user	0m0.000s
 sys	0m0.004s
 
+
+Aunque con la optimización crece el tiempo de ejecución hay que tener en cuenta que para activar las optimizaciones se debe activar '-O', en donde por defecto aparece esta optimización, al correr códigos cancelando la optimización con '-fno', tampoco se obtienen cambios.
