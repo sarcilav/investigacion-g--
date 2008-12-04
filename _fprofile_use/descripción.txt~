@@ -1,6 +1,0 @@
-Activa el conjunto de opciones que son retroalimentadas por los perfiles
-generados por la opción -fprofile-generate. Para que tenga sentido, es necesario compilar el programa
--fprofile-generate ; el programa debe ser ejecutado y después recompilado
-con la opción
-utilizando esta opción.
-

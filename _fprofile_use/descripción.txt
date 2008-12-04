@@ -1,5 +1,0 @@
-Activa una optimización basada en resultados de perfiles.
-esta opción solo sirve si se tienen perfiles creados para la compilación.
-se activan automaticamente otras optimizaciones: -fbranch-probabilities, -fvpt, 
--funroll-loops, -fpeel-loops, -ftracer
-
