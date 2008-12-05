@@ -1,16 +1,3 @@
 Se usa en conjunto con '-fprofile-arcs' '-fbranch-probabilities' y usa la información que estos entregan para realizar la optimización.
 No realiza optimización por si solo, sino que actúa como 'booster', con '-fprofile-arcs' le pide al compilador que genere un código especial para reunir información de los valores de las expresiones.
 Con '-fbranch-probabilities'
-
-
-
-real	0m0.002s
-user	0m0.000s
-sys	0m0.000s
-
-real	0m0.002s
-user	0m0.000s
-sys	0m0.000s
-
-
-La optimización se realizó en tamaño de código, pasando de 2113 líneas a solo 704

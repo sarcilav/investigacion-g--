@@ -2,3 +2,13 @@ Lo que esta opción permite es realizar el schedule de forma más rápida hacien
 todo por superbloques.
 El algoritmo que usa esta opción, en la versión de gcc actual, puede no funcionar
 o no arrojar resultados óptimos en algunas arquitecturas.
+
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.004s
+

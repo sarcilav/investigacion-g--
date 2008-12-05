@@ -1,3 +1,2 @@
-Realiza una optimización donde verifica si al hacer un salto en un...
-NO ENTIENDO
-
+Revisa si en bloque de código se puede extender hasta una un punto donde se incluya una condición y dependiendo de si el valor de esta condición se puede
+determinar con anterioridad, el salto se redirecciona.

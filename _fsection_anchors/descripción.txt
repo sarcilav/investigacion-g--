@@ -1,3 +1,5 @@
 Realiza optimización con el fin de evitar recalcular
 direcciones de memoria de variables.
 
+La optimización resultó en un warning del compilador indicando que la optimización no 
+se puede aplicar.

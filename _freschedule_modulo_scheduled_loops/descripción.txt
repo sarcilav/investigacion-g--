@@ -3,3 +3,14 @@ Esta opción se usa como un seguro, no permite que posteriores revisiones para h
 
 Estos schedule que se necesitan en diferentes etapas requieren como en los
 profilers hacer, más compilaciones.
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+sin
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+
+
+El tamaño del código se redujo en gran cantidad.

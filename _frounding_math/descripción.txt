@@ -1,3 +1,14 @@
 Desactiva las optimizaciones que asumen redondeo de números
 flotantes. Experimental, no sé garantiza que desactiva todas estas optimizaciones.
 
+
+real	   0m0.001s
+user	   0m0.000s
+sys	   0m0.000s
+
+sin
+real       0m0.001s
+user	   0m0.000s
+sys	   0m0.004s
+
+El código pasó de 7.5 kb a 3.7 kb. con la optimización.

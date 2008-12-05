@@ -1,0 +1,2287 @@
+	.file	"sample3.cpp"						.file	"sample3.cpp"
+	.section	.ctors,"aw",@progbits				.section	.ctors,"aw",@progbits
+	.align 4							.align 4
+	.long	_GLOBAL__I__Z16depthFirstSearchPSt6vectorIiSa		.long	_GLOBAL__I__Z16depthFirstSearchPSt6vectorIiSa
+	.text						      |		.section	.text._ZnwjPv,"axG",@progbits,_ZnwjPv
+	.align 2							.align 2
+.globl _Z16depthFirstSearchPSt6vectorIiSaIiEEPiii	      |		.weak	_ZnwjPv
+	.type	_Z16depthFirstSearchPSt6vectorIiSaIiEEPiii, @ |		.type	_ZnwjPv, @function
+_Z16depthFirstSearchPSt6vectorIiSaIiEEPiii:		      |	_ZnwjPv:
+.LFB2524:						      |	.LFB255:
+	pushl	%ebp							pushl	%ebp
+.LCFI0:								.LCFI0:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI1:								.LCFI1:
+	pushl	%edi					      |		movl	12(%ebp), %eax
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE255:
+							      >		.size	_ZnwjPv, .-_ZnwjPv
+							      >	.globl __gxx_personality_v0
+							      >		.section	.text._ZSt3minIjERKT_S2_S2_,"axG",@pr
+							      >		.align 2
+							      >		.weak	_ZSt3minIjERKT_S2_S2_
+							      >		.type	_ZSt3minIjERKT_S2_S2_, @function
+							      >	_ZSt3minIjERKT_S2_S2_:
+							      >	.LFB2526:
+							      >		pushl	%ebp
+.LCFI2:								.LCFI2:
+	pushl	%esi					      |		movl	%esp, %ebp
+.LCFI3:								.LCFI3:
+	pushl	%ebx					      |		subl	$4, %esp
+.LCFI4:								.LCFI4:
+	subl	$16, %esp				      |		movl	12(%ebp), %eax
+							      >		movl	(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %eax
+							      >		cmpl	%eax, %edx
+							      >		jae	.L4
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, -4(%ebp)
+							      >		jmp	.L6
+							      >	.L4:
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, -4(%ebp)
+							      >	.L6:
+							      >		movl	-4(%ebp), %eax
+							      >		leave
+							      >		ret
+							      >	.LFE2526:
+							      >		.size	_ZSt3minIjERKT_S2_S2_, .-_ZSt3minIjERKT_S2_S2
+							      >		.text
+							      >		.align 2
+							      >		.type	_ZSt17__verify_groupingPKcjRKSs, @function
+							      >	_ZSt17__verify_groupingPKcjRKSs:
+							      >	.LFB1358:
+							      >		pushl	%ebp
+.LCFI5:								.LCFI5:
+	movl	20(%ebp), %edi				      |		movl	%esp, %ebp
+							      >	.LCFI6:
+							      >		pushl	%ebx
+							      >	.LCFI7:
+							      >		subl	$52, %esp
+							      >	.LCFI8:
+	movl	16(%ebp), %eax						movl	16(%ebp), %eax
+	movl	12(%ebp), %edx				      |		movl	%eax, (%esp)
+	leal	(%edx,%eax,4), %ecx			      |		call	_ZNKSs4sizeEv
+	movl	(%ecx), %edx				      |		subl	$1, %eax
+	testl	%edx, %edx				      |		movl	%eax, -12(%ebp)
+	je	.L2					      |		movl	12(%ebp), %eax
+	cmpl	%edi, %edx				      |		subl	$1, %eax
+							      >		movl	%eax, -20(%ebp)
+							      >		leal	-20(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		leal	-12(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZSt3minIjERKT_S2_S2_
+							      >		movl	(%eax), %eax
+							      >		movl	%eax, -16(%ebp)
+							      >		movl	-12(%ebp), %eax
+							      >		movl	%eax, -24(%ebp)
+							      >		movb	$1, -5(%ebp)
+							      >		movl	$0, -28(%ebp)
+							      >		jmp	.L9
+							      >	.L10:
+							      >		movl	-24(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNKSsixEj
+							      >		movzbl	(%eax), %edx
+							      >		movl	-28(%ebp), %eax
+							      >		addl	8(%ebp), %eax
+							      >		movzbl	(%eax), %eax
+							      >		cmpb	%al, %dl
+							      >		sete	%al
+							      >		movb	%al, -5(%ebp)
+							      >		subl	$1, -24(%ebp)
+							      >		addl	$1, -28(%ebp)
+							      >	.L9:
+							      >		movl	-28(%ebp), %eax
+							      >		cmpl	-16(%ebp), %eax
+							      >		jae	.L13
+							      >		cmpb	$0, -5(%ebp)
+							      >		jne	.L10
+							      >		jmp	.L13
+							      >	.L14:
+							      >		movl	-24(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNKSsixEj
+							      >		movzbl	(%eax), %edx
+							      >		movl	-16(%ebp), %eax
+							      >		addl	8(%ebp), %eax
+							      >		movzbl	(%eax), %eax
+							      >		cmpb	%al, %dl
+	sete	%al							sete	%al
+							      >		movb	%al, -5(%ebp)
+							      >		subl	$1, -24(%ebp)
+							      >	.L13:
+							      >		cmpl	$0, -24(%ebp)
+							      >		je	.L15
+							      >		cmpb	$0, -5(%ebp)
+							      >		jne	.L14
+							      >	.L15:
+							      >		movl	-16(%ebp), %eax
+							      >		addl	8(%ebp), %eax
+							      >		movzbl	(%eax), %eax
+							      >		testb	%al, %al
+							      >		jle	.L17
+							      >		movzbl	-5(%ebp), %ebx
+							      >		movl	$0, 4(%esp)
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNKSsixEj
+							      >		movzbl	(%eax), %edx
+							      >		movl	-16(%ebp), %eax
+							      >		addl	8(%ebp), %eax
+							      >		movzbl	(%eax), %eax
+							      >		cmpb	%al, %dl
+							      >		setle	%al
+	movzbl	%al, %eax						movzbl	%al, %eax
+	jmp	.L4					      |		andl	%ebx, %eax
+.L2:							      |		testl	%eax, %eax
+	movl	%edi, (%ecx)				      |		setne	%al
+	leal	(%eax,%eax,2), %eax			      |		movb	%al, -5(%ebp)
+	movl	8(%ebp), %edx				      |	.L17:
+	leal	(%edx,%eax,4), %ebx			      |		movzbl	-5(%ebp), %eax
+	movl	(%ebx), %edx				      |		addl	$52, %esp
+	movl	4(%ebx), %eax				      |		popl	%ebx
+	subl	%edx, %eax				      |		popl	%ebp
+							      >		ret
+							      >	.LFE1358:
+							      >		.size	_ZSt17__verify_groupingPKcjRKSs, .-_ZSt17__ve
+							      >		.section	.text._ZNKSt6vectorIiSaIiEE4sizeEv,"a
+							      >		.align 2
+							      >		.weak	_ZNKSt6vectorIiSaIiEE4sizeEv
+							      >		.type	_ZNKSt6vectorIiSaIiEE4sizeEv, @function
+							      >	_ZNKSt6vectorIiSaIiEE4sizeEv:
+							      >	.LFB2531:
+							      >		pushl	%ebp
+							      >	.LCFI9:
+							      >		movl	%esp, %ebp
+							      >	.LCFI10:
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %eax
+							      >		movl	%eax, %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %eax
+							      >		movl	%edx, %ecx
+							      >		subl	%eax, %ecx
+							      >		movl	%ecx, %eax
+	sarl	$2, %eax						sarl	$2, %eax
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2531:
+							      >		.size	_ZNKSt6vectorIiSaIiEE4sizeEv, .-_ZNKSt6vector
+							      >		.section	.text._ZNSt6vectorIiSaIiEEixEj,"axG",
+							      >		.align 2
+							      >		.weak	_ZNSt6vectorIiSaIiEEixEj
+							      >		.type	_ZNSt6vectorIiSaIiEEixEj, @function
+							      >	_ZNSt6vectorIiSaIiEEixEj:
+							      >	.LFB2532:
+							      >		pushl	%ebp
+							      >	.LCFI11:
+							      >		movl	%esp, %ebp
+							      >	.LCFI12:
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %edx
+							      >		movl	12(%ebp), %eax
+							      >		sall	$2, %eax
+							      >		leal	(%edx,%eax), %eax
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2532:
+							      >		.size	_ZNSt6vectorIiSaIiEEixEj, .-_ZNSt6vectorIiSaI
+							      >		.text
+							      >		.align 2
+							      >	.globl _Z16depthFirstSearchPSt6vectorIiSaIiEEPiii
+							      >		.type	_Z16depthFirstSearchPSt6vectorIiSaIiEEPiii, @
+							      >	_Z16depthFirstSearchPSt6vectorIiSaIiEEPiii:
+							      >	.LFB2524:
+							      >		pushl	%ebp
+							      >	.LCFI13:
+							      >		movl	%esp, %ebp
+							      >	.LCFI14:
+							      >		pushl	%ebx
+							      >	.LCFI15:
+							      >		subl	$36, %esp
+							      >	.LCFI16:
+							      >		movl	16(%ebp), %eax
+							      >		sall	$2, %eax
+							      >		addl	12(%ebp), %eax
+							      >		movl	(%eax), %eax
+	testl	%eax, %eax						testl	%eax, %eax
+	je	.L5					      |		je	.L25
+	movl	$0, %esi				      |		movl	16(%ebp), %eax
+	movl	$0, %ecx				      |		sall	$2, %eax
+.L7:							      |		addl	12(%ebp), %eax
+	cmpl	$1, %edi				      |		movl	(%eax), %eax
+	sete	%al					      |		cmpl	20(%ebp), %eax
+	movzbl	%al, %eax				      |		jne	.L27
+	addl	$1, %eax				      |		movl	$1, -24(%ebp)
+							      >		jmp	.L29
+							      >	.L27:
+							      >		movl	$0, -24(%ebp)
+							      >		jmp	.L29
+							      >	.L25:
+							      >		movl	16(%ebp), %eax
+							      >		sall	$2, %eax
+							      >		movl	%eax, %edx
+							      >		addl	12(%ebp), %edx
+							      >		movl	20(%ebp), %eax
+							      >		movl	%eax, (%edx)
+							      >		movl	$0, -8(%ebp)
+							      >		jmp	.L30
+							      >	.L31:
+							      >		cmpl	$1, 20(%ebp)
+							      >		jne	.L32
+							      >		movl	$2, -12(%ebp)
+							      >		jmp	.L34
+							      >	.L32:
+							      >		movl	$1, -12(%ebp)
+							      >	.L34:
+							      >		movl	-8(%ebp), %ecx
+							      >		movl	16(%ebp), %edx
+							      >		movl	%edx, %eax
+							      >		addl	%eax, %eax
+							      >		addl	%edx, %eax
+							      >		sall	$2, %eax
+							      >		addl	8(%ebp), %eax
+							      >		movl	%ecx, 4(%esp)
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt6vectorIiSaIiEEixEj
+							      >		movl	(%eax), %edx
+							      >		movl	-12(%ebp), %eax
+	movl	%eax, 12(%esp)						movl	%eax, 12(%esp)
+	movl	(%edx,%ecx,4), %eax			      |		movl	%edx, 8(%esp)
+	movl	%eax, 8(%esp)				      <
+	movl	12(%ebp), %eax						movl	12(%ebp), %eax
+	movl	%eax, 4(%esp)						movl	%eax, 4(%esp)
+	movl	8(%ebp), %edx				      |		movl	8(%ebp), %eax
+	movl	%edx, (%esp)				      |		movl	%eax, (%esp)
+	call	_Z16depthFirstSearchPSt6vectorIiSaIiEEPiii		call	_Z16depthFirstSearchPSt6vectorIiSaIiEEPiii
+							      >		xorl	$1, %eax
+	testb	%al, %al						testb	%al, %al
+	jne	.L11					      |		je	.L35
+	movl	$0, %eax				      |		movl	$0, -24(%ebp)
+	jmp	.L4					      |		jmp	.L29
+.L11:							      |	.L35:
+	addl	$1, %esi				      |		addl	$1, -8(%ebp)
+	movl	%esi, %ecx				      |	.L30:
+	movl	(%ebx), %edx				      |		movl	-8(%ebp), %ebx
+	movl	4(%ebx), %eax				      |		movl	16(%ebp), %edx
+	subl	%edx, %eax				      |		movl	%edx, %eax
+	sarl	$2, %eax				      |		addl	%eax, %eax
+	cmpl	%esi, %eax				      |		addl	%edx, %eax
+	ja	.L7					      |		sall	$2, %eax
+.L5:							      |		addl	8(%ebp), %eax
+	movl	$1, %eax				      |		movl	%eax, (%esp)
+.L4:							      |		call	_ZNKSt6vectorIiSaIiEE4sizeEv
+	addl	$16, %esp				      |		cmpl	%eax, %ebx
+							      >		setb	%al
+							      >		testb	%al, %al
+							      >		jne	.L31
+							      >		movl	$1, -24(%ebp)
+							      >	.L29:
+							      >		movl	-24(%ebp), %eax
+							      >		addl	$36, %esp
+	popl	%ebx							popl	%ebx
+	popl	%esi					      <
+	popl	%edi					      <
+	popl	%ebp							popl	%ebp
+	ret								ret
+.LFE2524:							.LFE2524:
+	.size	_Z16depthFirstSearchPSt6vectorIiSaIiEEPiii, .		.size	_Z16depthFirstSearchPSt6vectorIiSaIiEEPiii, .
+.globl __gxx_personality_v0				      |		.section	.text._ZN9__gnu_cxx13new_allocatorIiE
+	.align 2							.align 2
+	.type	_Z41__static_initialization_and_destruction_0 |		.weak	_ZN9__gnu_cxx13new_allocatorIiEC2Ev
+_Z41__static_initialization_and_destruction_0ii:	      |		.type	_ZN9__gnu_cxx13new_allocatorIiEC2Ev, @functio
+.LFB2603:						      |	_ZN9__gnu_cxx13new_allocatorIiEC2Ev:
+							      >	.LFB2553:
+	pushl	%ebp							pushl	%ebp
+.LCFI6:							      |	.LCFI17:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI7:							      |	.LCFI18:
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2553:
+							      >		.size	_ZN9__gnu_cxx13new_allocatorIiEC2Ev, .-_ZN9__
+							      >		.section	.text._ZNSaIiEC1Ev,"axG",@progbits,_Z
+							      >		.align 2
+							      >		.weak	_ZNSaIiEC1Ev
+							      >		.type	_ZNSaIiEC1Ev, @function
+							      >	_ZNSaIiEC1Ev:
+							      >	.LFB2535:
+							      >		pushl	%ebp
+							      >	.LCFI19:
+							      >		movl	%esp, %ebp
+							      >	.LCFI20:
+							      >		subl	$8, %esp
+							      >	.LCFI21:
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZN9__gnu_cxx13new_allocatorIiEC2Ev
+							      >		leave
+							      >		ret
+							      >	.LFE2535:
+							      >		.size	_ZNSaIiEC1Ev, .-_ZNSaIiEC1Ev
+							      >		.section	.text._ZN9__gnu_cxx13new_allocatorIiE
+							      >		.align 2
+							      >		.weak	_ZN9__gnu_cxx13new_allocatorIiED2Ev
+							      >		.type	_ZN9__gnu_cxx13new_allocatorIiED2Ev, @functio
+							      >	_ZN9__gnu_cxx13new_allocatorIiED2Ev:
+							      >	.LFB2556:
+							      >		pushl	%ebp
+							      >	.LCFI22:
+							      >		movl	%esp, %ebp
+							      >	.LCFI23:
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2556:
+							      >		.size	_ZN9__gnu_cxx13new_allocatorIiED2Ev, .-_ZN9__
+							      >		.section	.text._ZNSaIiED1Ev,"axG",@progbits,_Z
+							      >		.align 2
+							      >		.weak	_ZNSaIiED1Ev
+							      >		.type	_ZNSaIiED1Ev, @function
+							      >	_ZNSaIiED1Ev:
+							      >	.LFB2538:
+							      >		pushl	%ebp
+							      >	.LCFI24:
+							      >		movl	%esp, %ebp
+							      >	.LCFI25:
+							      >		subl	$8, %esp
+							      >	.LCFI26:
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZN9__gnu_cxx13new_allocatorIiED2Ev
+							      >		leave
+							      >		ret
+							      >	.LFE2538:
+							      >		.size	_ZNSaIiED1Ev, .-_ZNSaIiED1Ev
+							      >		.section	.text._ZNSaIiED2Ev,"axG",@progbits,_Z
+							      >		.align 2
+							      >		.weak	_ZNSaIiED2Ev
+							      >		.type	_ZNSaIiED2Ev, @function
+							      >	_ZNSaIiED2Ev:
+							      >	.LFB2537:
+							      >		pushl	%ebp
+							      >	.LCFI27:
+							      >		movl	%esp, %ebp
+							      >	.LCFI28:
+							      >		subl	$8, %esp
+							      >	.LCFI29:
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZN9__gnu_cxx13new_allocatorIiED2Ev
+							      >		leave
+							      >		ret
+							      >	.LFE2537:
+							      >		.size	_ZNSaIiED2Ev, .-_ZNSaIiED2Ev
+							      >		.section	.text._ZN9__gnu_cxx13new_allocatorIiE
+							      >		.align 2
+							      >		.weak	_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_
+							      >		.type	_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_, @fun
+							      >	_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_:
+							      >	.LFB2559:
+							      >		pushl	%ebp
+							      >	.LCFI30:
+							      >		movl	%esp, %ebp
+							      >	.LCFI31:
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2559:
+							      >		.size	_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_, .-_Z
+							      >		.section	.text._ZNSaIiEC2ERKS_,"axG",@progbits
+							      >		.align 2
+							      >		.weak	_ZNSaIiEC2ERKS_
+							      >		.type	_ZNSaIiEC2ERKS_, @function
+							      >	_ZNSaIiEC2ERKS_:
+							      >	.LFB2540:
+							      >		pushl	%ebp
+							      >	.LCFI32:
+							      >		movl	%esp, %ebp
+							      >	.LCFI33:
+							      >		subl	$8, %esp
+							      >	.LCFI34:
+							      >		movl	12(%ebp), %eax
+							      >		movl	8(%ebp), %edx
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_
+							      >		leave
+							      >		ret
+							      >	.LFE2540:
+							      >		.size	_ZNSaIiEC2ERKS_, .-_ZNSaIiEC2ERKS_
+							      >		.section	.text._ZNSaIiEC1ERKS_,"axG",@progbits
+							      >		.align 2
+							      >		.weak	_ZNSaIiEC1ERKS_
+							      >		.type	_ZNSaIiEC1ERKS_, @function
+							      >	_ZNSaIiEC1ERKS_:
+							      >	.LFB2541:
+							      >		pushl	%ebp
+							      >	.LCFI35:
+							      >		movl	%esp, %ebp
+							      >	.LCFI36:
+							      >		subl	$8, %esp
+							      >	.LCFI37:
+							      >		movl	12(%ebp), %eax
+							      >		movl	8(%ebp), %edx
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_
+							      >		leave
+							      >		ret
+							      >	.LFE2541:
+							      >		.size	_ZNSaIiEC1ERKS_, .-_ZNSaIiEC1ERKS_
+							      >		.section	.text._ZNSt12_Vector_baseIiSaIiEE12_V
+							      >		.align 2
+							      >		.weak	_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD1Ev
+							      >		.type	_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD1Ev
+							      >	_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD1Ev:
+							      >	.LFB2564:
+							      >		pushl	%ebp
+							      >	.LCFI38:
+							      >		movl	%esp, %ebp
+							      >	.LCFI39:
+							      >		subl	$8, %esp
+							      >	.LCFI40:
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSaIiED2Ev
+							      >		leave
+							      >		ret
+							      >	.LFE2564:
+							      >		.size	_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD1Ev
+							      >		.section	.text._ZNSt12_Vector_baseIiSaIiEE19_M
+							      >		.align 2
+							      >		.weak	_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloca
+							      >		.type	_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloca
+							      >	_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv:
+							      >	.LFB2570:
+							      >		pushl	%ebp
+							      >	.LCFI41:
+							      >		movl	%esp, %ebp
+							      >	.LCFI42:
+							      >		movl	8(%ebp), %eax
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2570:
+							      >		.size	_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloca
+							      >		.section	.text._ZN9__gnu_cxx13new_allocatorIiE
+							      >		.align 2
+							      >		.weak	_ZN9__gnu_cxx13new_allocatorIiE9constructEPiR
+							      >		.type	_ZN9__gnu_cxx13new_allocatorIiE9constructEPiR
+							      >	_ZN9__gnu_cxx13new_allocatorIiE9constructEPiRKi:
+							      >	.LFB2572:
+							      >		pushl	%ebp
+							      >	.LCFI43:
+							      >		movl	%esp, %ebp
+							      >	.LCFI44:
+	subl	$24, %esp						subl	$24, %esp
+.LCFI8:							      |	.LCFI45:
+	cmpl	$1, %eax				      |		movl	12(%ebp), %eax
+	jne	.L19					      |		movl	%eax, 4(%esp)
+	cmpl	$65535, %edx				      |		movl	$4, (%esp)
+	jne	.L19					      |		call	_ZnwjPv
+	movl	$_ZSt8__ioinit, (%esp)			      |		movl	%eax, -4(%ebp)
+	call	_ZNSt8ios_base4InitC1Ev			      |		cmpl	$0, -4(%ebp)
+	movl	$__dso_handle, 8(%esp)			      |		je	.L67
+	movl	$0, 4(%esp)				      |		movl	16(%ebp), %eax
+	movl	$__tcf_0, (%esp)			      |		movl	(%eax), %eax
+	call	__cxa_atexit				      |		movl	-4(%ebp), %edx
+.L19:							      |		movl	%eax, (%edx)
+							      >	.L67:
+	leave								leave
+	ret								ret
+.LFE2603:						      |	.LFE2572:
+	.size	_Z41__static_initialization_and_destruction_0 |		.size	_ZN9__gnu_cxx13new_allocatorIiE9constructEPiR
+							      >		.section	.text._ZNSt12_Vector_baseIiSaIiEE12_V
+	.align 2							.align 2
+	.type	_GLOBAL__I__Z16depthFirstSearchPSt6vectorIiSa |		.weak	_ZNSt12_Vector_baseIiSaIiEE12_Vector_implC1ER
+_GLOBAL__I__Z16depthFirstSearchPSt6vectorIiSaIiEEPiii:	      |		.type	_ZNSt12_Vector_baseIiSaIiEE12_Vector_implC1ER
+.LFB2605:						      |	_ZNSt12_Vector_baseIiSaIiEE12_Vector_implC1ERKS0_:
+							      >	.LFB2577:
+	pushl	%ebp							pushl	%ebp
+.LCFI9:							      |	.LCFI46:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI10:						      |	.LCFI47:
+	subl	$8, %esp						subl	$8, %esp
+.LCFI11:						      |	.LCFI48:
+	movl	$65535, %edx				      |		movl	8(%ebp), %edx
+	movl	$1, %eax				      |		movl	12(%ebp), %eax
+	call	_Z41__static_initialization_and_destruction_0 |		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZNSaIiEC2ERKS_
+							      >		movl	8(%ebp), %eax
+							      >		movl	$0, (%eax)
+							      >		movl	8(%ebp), %eax
+							      >		movl	$0, 4(%eax)
+							      >		movl	8(%ebp), %eax
+							      >		movl	$0, 8(%eax)
+							      >		leave
+							      >		ret
+							      >	.LFE2577:
+							      >		.size	_ZNSt12_Vector_baseIiSaIiEE12_Vector_implC1ER
+							      >		.section	.text._ZNSt12_Vector_baseIiSaIiEEC2ER
+							      >		.align 2
+							      >		.weak	_ZNSt12_Vector_baseIiSaIiEEC2ERKS0_
+							      >		.type	_ZNSt12_Vector_baseIiSaIiEEC2ERKS0_, @functio
+							      >	_ZNSt12_Vector_baseIiSaIiEEC2ERKS0_:
+							      >	.LFB2565:
+							      >		pushl	%ebp
+							      >	.LCFI49:
+							      >		movl	%esp, %ebp
+							      >	.LCFI50:
+							      >		subl	$8, %esp
+							      >	.LCFI51:
+							      >		movl	8(%ebp), %edx
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZNSt12_Vector_baseIiSaIiEE12_Vector_implC1ER
+							      >		leave
+							      >		ret
+							      >	.LFE2565:
+							      >		.size	_ZNSt12_Vector_baseIiSaIiEEC2ERKS0_, .-_ZNSt1
+							      >		.section	.text._ZNSt6vectorIiSaIiEEC1ERKS0_,"a
+							      >		.align 2
+							      >		.weak	_ZNSt6vectorIiSaIiEEC1ERKS0_
+							      >		.type	_ZNSt6vectorIiSaIiEEC1ERKS0_, @function
+							      >	_ZNSt6vectorIiSaIiEEC1ERKS0_:
+							      >	.LFB2544:
+							      >		pushl	%ebp
+							      >	.LCFI52:
+							      >		movl	%esp, %ebp
+							      >	.LCFI53:
+							      >		subl	$8, %esp
+							      >	.LCFI54:
+							      >		movl	8(%ebp), %edx
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZNSt12_Vector_baseIiSaIiEEC2ERKS0_
+							      >		leave
+							      >		ret
+							      >	.LFE2544:
+							      >		.size	_ZNSt6vectorIiSaIiEEC1ERKS0_, .-_ZNSt6vectorI
+							      >		.section	.text._ZNK9__gnu_cxx17__normal_iterat
+							      >		.align 2
+							      >		.weak	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vector
+							      >		.type	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vector
+							      >	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv
+							      >	.LFB2580:
+							      >		pushl	%ebp
+							      >	.LCFI55:
+							      >		movl	%esp, %ebp
+							      >	.LCFI56:
+							      >		movl	8(%ebp), %eax
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2580:
+							      >		.size	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vector
+							      >		.section	.text._ZNK9__gnu_cxx17__normal_iterat
+							      >		.align 2
+							      >		.weak	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vector
+							      >		.type	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vector
+							      >	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv:
+							      >	.LFB2582:
+							      >		pushl	%ebp
+							      >	.LCFI57:
+							      >		movl	%esp, %ebp
+							      >	.LCFI58:
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %eax
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2582:
+							      >		.size	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vector
+							      >		.section	.text._ZN9__gnu_cxx17__normal_iterato
+							      >		.align 2
+							      >		.weak	_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorI
+							      >		.type	_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorI
+							      >	_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEC1ERKS1_
+							      >	.LFB2588:
+							      >		pushl	%ebp
+							      >	.LCFI59:
+							      >		movl	%esp, %ebp
+							      >	.LCFI60:
+							      >		movl	12(%ebp), %eax
+							      >		movl	(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	%edx, (%eax)
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2588:
+							      >		.size	_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorI
+							      >		.section	.text._ZNSt6vectorIiSaIiEE3endEv,"axG
+							      >		.align 2
+							      >		.weak	_ZNSt6vectorIiSaIiEE3endEv
+							      >		.type	_ZNSt6vectorIiSaIiEE3endEv, @function
+							      >	_ZNSt6vectorIiSaIiEE3endEv:
+							      >	.LFB2574:
+							      >		pushl	%ebp
+							      >	.LCFI61:
+							      >		movl	%esp, %ebp
+							      >	.LCFI62:
+							      >		pushl	%ebx
+							      >	.LCFI63:
+							      >		subl	$20, %esp
+							      >	.LCFI64:
+							      >		movl	8(%ebp), %ebx
+							      >		movl	12(%ebp), %eax
+							      >		addl	$4, %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%ebx, (%esp)
+							      >		call	_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorI
+							      >		movl	%ebx, %eax
+							      >		addl	$20, %esp
+							      >		popl	%ebx
+							      >		popl	%ebp
+							      >		ret	$4
+							      >	.LFE2574:
+							      >		.size	_ZNSt6vectorIiSaIiEE3endEv, .-_ZNSt6vectorIiS
+							      >		.section	.text._ZSt13__destroy_auxIPiEvT_S1_St
+							      >		.align 2
+							      >		.weak	_ZSt13__destroy_auxIPiEvT_S1_St11__true_type
+							      >		.type	_ZSt13__destroy_auxIPiEvT_S1_St11__true_type,
+							      >	_ZSt13__destroy_auxIPiEvT_S1_St11__true_type:
+							      >	.LFB2590:
+							      >		pushl	%ebp
+							      >	.LCFI65:
+							      >		movl	%esp, %ebp
+							      >	.LCFI66:
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2590:
+							      >		.size	_ZSt13__destroy_auxIPiEvT_S1_St11__true_type,
+							      >		.section	.text._ZSt8_DestroyIPiEvT_S1_,"axG",@
+							      >		.align 2
+							      >		.weak	_ZSt8_DestroyIPiEvT_S1_
+							      >		.type	_ZSt8_DestroyIPiEvT_S1_, @function
+							      >	_ZSt8_DestroyIPiEvT_S1_:
+							      >	.LFB2579:
+							      >		pushl	%ebp
+							      >	.LCFI67:
+							      >		movl	%esp, %ebp
+							      >	.LCFI68:
+							      >		subl	$24, %esp
+							      >	.LCFI69:
+							      >		movzbl	-1(%ebp), %eax
+							      >		movb	%al, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZSt13__destroy_auxIPiEvT_S1_St11__true_type
+							      >		leave
+							      >		ret
+							      >	.LFE2579:
+							      >		.size	_ZSt8_DestroyIPiEvT_S1_, .-_ZSt8_DestroyIPiEv
+							      >		.section	.text._ZSt8_DestroyIPiiEvT_S1_SaIT0_E
+							      >		.align 2
+							      >		.weak	_ZSt8_DestroyIPiiEvT_S1_SaIT0_E
+							      >		.type	_ZSt8_DestroyIPiiEvT_S1_SaIT0_E, @function
+							      >	_ZSt8_DestroyIPiiEvT_S1_SaIT0_E:
+							      >	.LFB2571:
+							      >		pushl	%ebp
+							      >	.LCFI70:
+							      >		movl	%esp, %ebp
+							      >	.LCFI71:
+							      >		subl	$8, %esp
+							      >	.LCFI72:
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZSt8_DestroyIPiEvT_S1_
+							      >		leave
+							      >		ret
+							      >	.LFE2571:
+							      >		.size	_ZSt8_DestroyIPiiEvT_S1_SaIT0_E, .-_ZSt8_Dest
+							      >		.section	.text._ZNKSt12_Vector_baseIiSaIiEE19_
+							      >		.align 2
+							      >		.weak	_ZNKSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloc
+							      >		.type	_ZNKSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloc
+							      >	_ZNKSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv:
+							      >	.LFB2592:
+							      >		pushl	%ebp
+							      >	.LCFI73:
+							      >		movl	%esp, %ebp
+							      >	.LCFI74:
+							      >		movl	8(%ebp), %eax
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2592:
+							      >		.size	_ZNKSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloc
+							      >		.section	.text._ZNK9__gnu_cxx13new_allocatorIi
+							      >		.align 2
+							      >		.weak	_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv
+							      >		.type	_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv, 
+							      >	_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv:
+							      >	.LFB2593:
+							      >		pushl	%ebp
+							      >	.LCFI75:
+							      >		movl	%esp, %ebp
+							      >	.LCFI76:
+							      >		movl	$1073741823, %eax
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2593:
+							      >		.size	_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv, 
+							      >		.section	.text._ZNKSt6vectorIiSaIiEE8max_sizeE
+							      >		.align 2
+							      >		.weak	_ZNKSt6vectorIiSaIiEE8max_sizeEv
+							      >		.type	_ZNKSt6vectorIiSaIiEE8max_sizeEv, @function
+							      >	_ZNKSt6vectorIiSaIiEE8max_sizeEv:
+							      >	.LFB2583:
+							      >		pushl	%ebp
+							      >	.LCFI77:
+							      >		movl	%esp, %ebp
+							      >	.LCFI78:
+							      >		subl	$8, %esp
+							      >	.LCFI79:
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNKSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloc
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv
+							      >		leave
+							      >		ret
+							      >	.LFE2583:
+							      >		.size	_ZNKSt6vectorIiSaIiEE8max_sizeEv, .-_ZNKSt6ve
+							      >		.text
+							      >		.align 2
+							      >		.type	_Z41__static_initialization_and_destruction_0
+							      >	_Z41__static_initialization_and_destruction_0ii:
+							      >	.LFB2603:
+							      >		pushl	%ebp
+							      >	.LCFI80:
+							      >		movl	%esp, %ebp
+							      >	.LCFI81:
+							      >		subl	$24, %esp
+							      >	.LCFI82:
+							      >		cmpl	$1, 8(%ebp)
+							      >		jne	.L98
+							      >		cmpl	$65535, 12(%ebp)
+							      >		jne	.L98
+							      >		movl	$_ZSt8__ioinit, (%esp)
+							      >		call	_ZNSt8ios_base4InitC1Ev
+							      >		movl	$__dso_handle, 8(%esp)
+							      >		movl	$0, 4(%esp)
+							      >		movl	$__tcf_0, (%esp)
+							      >		call	__cxa_atexit
+							      >	.L98:
+							      >		leave
+							      >		ret
+							      >	.LFE2603:
+							      >		.size	_Z41__static_initialization_and_destruction_0
+							      >		.align 2
+							      >		.type	_GLOBAL__I__Z16depthFirstSearchPSt6vectorIiSa
+							      >	_GLOBAL__I__Z16depthFirstSearchPSt6vectorIiSaIiEEPiii:
+							      >	.LFB2605:
+							      >		pushl	%ebp
+							      >	.LCFI83:
+							      >		movl	%esp, %ebp
+							      >	.LCFI84:
+							      >		subl	$8, %esp
+							      >	.LCFI85:
+							      >		movl	$65535, 4(%esp)
+							      >		movl	$1, (%esp)
+							      >		call	_Z41__static_initialization_and_destruction_0
+							      >		leave
+							      >		ret
+							      >	.LFE2605:
+							      >		.size	_GLOBAL__I__Z16depthFirstSearchPSt6vectorIiSa
+							      >		.align 2
+							      >		.type	__tcf_0, @function
+							      >	__tcf_0:
+							      >	.LFB2604:
+							      >		pushl	%ebp
+							      >	.LCFI86:
+							      >		movl	%esp, %ebp
+							      >	.LCFI87:
+							      >		subl	$8, %esp
+							      >	.LCFI88:
+							      >		movl	$_ZSt8__ioinit, (%esp)
+							      >		call	_ZNSt8ios_base4InitD1Ev
+							      >		leave
+							      >		ret
+							      >	.LFE2604:
+							      >		.size	__tcf_0, .-__tcf_0
+							      >		.section	.text._ZNSt15__copy_backwardILb1ESt26
+							      >		.align 2
+							      >		.weak	_ZNSt15__copy_backwardILb1ESt26random_access_
+							      >		.type	_ZNSt15__copy_backwardILb1ESt26random_access_
+							      >	_ZNSt15__copy_backwardILb1ESt26random_access_iterator_tagE8__
+							      >	.LFB2598:
+							      >		pushl	%ebp
+							      >	.LCFI89:
+							      >		movl	%esp, %ebp
+							      >	.LCFI90:
+							      >		pushl	%ebx
+							      >	.LCFI91:
+							      >		subl	$36, %esp
+							      >	.LCFI92:
+							      >		movl	12(%ebp), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	%edx, %ecx
+							      >		subl	%eax, %ecx
+							      >		movl	%ecx, %eax
+							      >		sarl	$2, %eax
+							      >		movl	%eax, -8(%ebp)
+							      >		movl	-8(%ebp), %eax
+							      >		leal	0(,%eax,4), %ecx
+							      >		movl	-8(%ebp), %eax
+							      >		sall	$2, %eax
+							      >		movl	%eax, %edx
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, %ebx
+							      >		subl	%edx, %ebx
+							      >		movl	%ebx, %edx
+							      >		movl	%ecx, 8(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	memmove
+							      >		movl	-8(%ebp), %eax
+							      >		sall	$2, %eax
+							      >		movl	%eax, %edx
+							      >		movl	16(%ebp), %eax
+							      >		subl	%edx, %eax
+							      >		addl	$36, %esp
+							      >		popl	%ebx
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2598:
+							      >		.size	_ZNSt15__copy_backwardILb1ESt26random_access_
+							      >		.section	.text._ZSt19__copy_backward_auxIPiS0_
+							      >		.align 2
+							      >		.weak	_ZSt19__copy_backward_auxIPiS0_ET0_T_S2_S1_
+							      >		.type	_ZSt19__copy_backward_auxIPiS0_ET0_T_S2_S1_, 
+							      >	_ZSt19__copy_backward_auxIPiS0_ET0_T_S2_S1_:
+							      >	.LFB2596:
+							      >		pushl	%ebp
+							      >	.LCFI93:
+							      >		movl	%esp, %ebp
+							      >	.LCFI94:
+							      >		subl	$40, %esp
+							      >	.LCFI95:
+							      >		movb	$1, -1(%ebp)
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt15__copy_backwardILb1ESt26random_access_
+							      >		leave
+							      >		ret
+							      >	.LFE2596:
+							      >		.size	_ZSt19__copy_backward_auxIPiS0_ET0_T_S2_S1_, 
+							      >		.section	.text._ZNSt22__copy_backward_normalIL
+							      >		.align 2
+							      >		.weak	_ZNSt22__copy_backward_normalILb0ELb0EE10__co
+							      >		.type	_ZNSt22__copy_backward_normalILb0ELb0EE10__co
+							      >	_ZNSt22__copy_backward_normalILb0ELb0EE10__copy_b_nIPiS2_EET0
+							      >	.LFB2591:
+							      >		pushl	%ebp
+							      >	.LCFI96:
+							      >		movl	%esp, %ebp
+							      >	.LCFI97:
+							      >		subl	$24, %esp
+							      >	.LCFI98:
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZSt19__copy_backward_auxIPiS0_ET0_T_S2_S1_
+							      >		leave
+							      >		ret
+							      >	.LFE2591:
+							      >		.size	_ZNSt22__copy_backward_normalILb0ELb0EE10__co
+							      >		.section	.text._ZSt13copy_backwardIPiS0_ET0_T_
+							      >		.align 2
+							      >		.weak	_ZSt13copy_backwardIPiS0_ET0_T_S2_S1_
+							      >		.type	_ZSt13copy_backwardIPiS0_ET0_T_S2_S1_, @funct
+							      >	_ZSt13copy_backwardIPiS0_ET0_T_S2_S1_:
+							      >	.LFB2581:
+							      >		pushl	%ebp
+							      >	.LCFI99:
+							      >		movl	%esp, %ebp
+							      >	.LCFI100:
+							      >		subl	$40, %esp
+							      >	.LCFI101:
+							      >		movb	$0, -1(%ebp)
+							      >		movb	$0, -2(%ebp)
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt22__copy_backward_normalILb0ELb0EE10__co
+							      >		leave
+							      >		ret
+							      >	.LFE2581:
+							      >		.size	_ZSt13copy_backwardIPiS0_ET0_T_S2_S1_, .-_ZSt
+							      >		.section	.text._ZNSt6__copyILb1ESt26random_acc
+							      >		.align 2
+							      >		.weak	_ZNSt6__copyILb1ESt26random_access_iterator_t
+							      >		.type	_ZNSt6__copyILb1ESt26random_access_iterator_t
+							      >	_ZNSt6__copyILb1ESt26random_access_iterator_tagE4copyIiEEPT_P
+							      >	.LFB2602:
+							      >		pushl	%ebp
+							      >	.LCFI102:
+							      >		movl	%esp, %ebp
+							      >	.LCFI103:
+							      >		subl	$24, %esp
+							      >	.LCFI104:
+							      >		movl	12(%ebp), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	%edx, %ecx
+							      >		subl	%eax, %ecx
+							      >		movl	%ecx, %eax
+							      >		sarl	$2, %eax
+							      >		sall	$2, %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	memmove
+							      >		movl	12(%ebp), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	%edx, %ecx
+							      >		subl	%eax, %ecx
+							      >		movl	%ecx, %eax
+							      >		sarl	$2, %eax
+							      >		sall	$2, %eax
+							      >		addl	16(%ebp), %eax
+							      >		leave
+							      >		ret
+							      >	.LFE2602:
+							      >		.size	_ZNSt6__copyILb1ESt26random_access_iterator_t
+							      >		.section	.text._ZSt10__copy_auxIPiS0_ET0_T_S2_
+							      >		.align 2
+							      >		.weak	_ZSt10__copy_auxIPiS0_ET0_T_S2_S1_
+							      >		.type	_ZSt10__copy_auxIPiS0_ET0_T_S2_S1_, @function
+							      >	_ZSt10__copy_auxIPiS0_ET0_T_S2_S1_:
+							      >	.LFB2601:
+							      >		pushl	%ebp
+							      >	.LCFI105:
+							      >		movl	%esp, %ebp
+							      >	.LCFI106:
+							      >		subl	$40, %esp
+							      >	.LCFI107:
+							      >		movb	$1, -1(%ebp)
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt6__copyILb1ESt26random_access_iterator_t
+							      >		leave
+							      >		ret
+							      >	.LFE2601:
+							      >		.size	_ZSt10__copy_auxIPiS0_ET0_T_S2_S1_, .-_ZSt10_
+							      >		.section	.text._ZNSt13__copy_normalILb0ELb0EE8
+							      >		.align 2
+							      >		.weak	_ZNSt13__copy_normalILb0ELb0EE8__copy_nIPiS2_
+							      >		.type	_ZNSt13__copy_normalILb0ELb0EE8__copy_nIPiS2_
+							      >	_ZNSt13__copy_normalILb0ELb0EE8__copy_nIPiS2_EET0_T_S4_S3_:
+							      >	.LFB2600:
+							      >		pushl	%ebp
+							      >	.LCFI108:
+							      >		movl	%esp, %ebp
+							      >	.LCFI109:
+							      >		subl	$24, %esp
+							      >	.LCFI110:
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZSt10__copy_auxIPiS0_ET0_T_S2_S1_
+							      >		leave
+							      >		ret
+							      >	.LFE2600:
+							      >		.size	_ZNSt13__copy_normalILb0ELb0EE8__copy_nIPiS2_
+							      >		.section	.text._ZSt4copyIPiS0_ET0_T_S2_S1_,"ax
+							      >		.align 2
+							      >		.weak	_ZSt4copyIPiS0_ET0_T_S2_S1_
+							      >		.type	_ZSt4copyIPiS0_ET0_T_S2_S1_, @function
+							      >	_ZSt4copyIPiS0_ET0_T_S2_S1_:
+							      >	.LFB2599:
+							      >		pushl	%ebp
+							      >	.LCFI111:
+							      >		movl	%esp, %ebp
+							      >	.LCFI112:
+							      >		subl	$40, %esp
+							      >	.LCFI113:
+							      >		movb	$0, -1(%ebp)
+							      >		movb	$0, -2(%ebp)
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt13__copy_normalILb0ELb0EE8__copy_nIPiS2_
+							      >		leave
+							      >		ret
+							      >	.LFE2599:
+							      >		.size	_ZSt4copyIPiS0_ET0_T_S2_S1_, .-_ZSt4copyIPiS0
+							      >		.section	.text._ZSt24__uninitialized_copy_auxI
+							      >		.align 2
+							      >		.weak	_ZSt24__uninitialized_copy_auxIPiS0_ET0_T_S2_
+							      >		.type	_ZSt24__uninitialized_copy_auxIPiS0_ET0_T_S2_
+							      >	_ZSt24__uninitialized_copy_auxIPiS0_ET0_T_S2_S1_St11__true_ty
+							      >	.LFB2597:
+							      >		pushl	%ebp
+							      >	.LCFI114:
+							      >		movl	%esp, %ebp
+							      >	.LCFI115:
+							      >		subl	$24, %esp
+							      >	.LCFI116:
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZSt4copyIPiS0_ET0_T_S2_S1_
+							      >		leave
+							      >		ret
+							      >	.LFE2597:
+							      >		.size	_ZSt24__uninitialized_copy_auxIPiS0_ET0_T_S2_
+							      >		.section	.text._ZSt18uninitialized_copyIPiS0_E
+							      >		.align 2
+							      >		.weak	_ZSt18uninitialized_copyIPiS0_ET0_T_S2_S1_
+							      >		.type	_ZSt18uninitialized_copyIPiS0_ET0_T_S2_S1_, @
+							      >	_ZSt18uninitialized_copyIPiS0_ET0_T_S2_S1_:
+							      >	.LFB2595:
+							      >		pushl	%ebp
+							      >	.LCFI117:
+							      >		movl	%esp, %ebp
+							      >	.LCFI118:
+							      >		subl	$24, %esp
+							      >	.LCFI119:
+							      >		movzbl	-1(%ebp), %eax
+							      >		movb	%al, 12(%esp)
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZSt24__uninitialized_copy_auxIPiS0_ET0_T_S2_
+							      >		leave
+							      >		ret
+							      >	.LFE2595:
+							      >		.size	_ZSt18uninitialized_copyIPiS0_ET0_T_S2_S1_, .
+							      >		.section	.text._ZSt22__uninitialized_copy_aIPi
+							      >		.align 2
+							      >		.weak	_ZSt22__uninitialized_copy_aIPiS0_iET0_T_S2_S
+							      >		.type	_ZSt22__uninitialized_copy_aIPiS0_iET0_T_S2_S
+							      >	_ZSt22__uninitialized_copy_aIPiS0_iET0_T_S2_S1_SaIT1_E:
+							      >	.LFB2585:
+							      >		pushl	%ebp
+							      >	.LCFI120:
+							      >		movl	%esp, %ebp
+							      >	.LCFI121:
+							      >		subl	$24, %esp
+							      >	.LCFI122:
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZSt18uninitialized_copyIPiS0_ET0_T_S2_S1_
+							      >		leave
+							      >		ret
+							      >	.LFE2585:
+							      >		.size	_ZSt22__uninitialized_copy_aIPiS0_iET0_T_S2_S
+							      >		.section	.text._ZN9__gnu_cxx13new_allocatorIiE
+							      >		.align 2
+							      >		.weak	_ZN9__gnu_cxx13new_allocatorIiE8allocateEjPKv
+							      >		.type	_ZN9__gnu_cxx13new_allocatorIiE8allocateEjPKv
+							      >	_ZN9__gnu_cxx13new_allocatorIiE8allocateEjPKv:
+							      >	.LFB2594:
+							      >		pushl	%ebp
+							      >	.LCFI123:
+							      >		movl	%esp, %ebp
+							      >	.LCFI124:
+							      >		subl	$8, %esp
+							      >	.LCFI125:
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv
+							      >		cmpl	12(%ebp), %eax
+							      >		setb	%al
+							      >		movzbl	%al, %eax
+							      >		testl	%eax, %eax
+							      >		setne	%al
+							      >		testb	%al, %al
+							      >		je	.L126
+							      >		call	_ZSt17__throw_bad_allocv
+							      >	.L126:
+							      >		movl	12(%ebp), %eax
+							      >		sall	$2, %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_Znwj
+							      >		leave
+							      >		ret
+							      >	.LFE2594:
+							      >		.size	_ZN9__gnu_cxx13new_allocatorIiE8allocateEjPKv
+							      >		.section	.text._ZNSt12_Vector_baseIiSaIiEE11_M
+							      >		.align 2
+							      >		.weak	_ZNSt12_Vector_baseIiSaIiEE11_M_allocateEj
+							      >		.type	_ZNSt12_Vector_baseIiSaIiEE11_M_allocateEj, @
+							      >	_ZNSt12_Vector_baseIiSaIiEE11_M_allocateEj:
+							      >	.LFB2584:
+							      >		pushl	%ebp
+							      >	.LCFI126:
+							      >		movl	%esp, %ebp
+							      >	.LCFI127:
+							      >		subl	$24, %esp
+							      >	.LCFI128:
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, %edx
+							      >		movl	$0, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZN9__gnu_cxx13new_allocatorIiE8allocateEjPKv
+							      >		leave
+							      >		ret
+							      >	.LFE2584:
+							      >		.size	_ZNSt12_Vector_baseIiSaIiEE11_M_allocateEj, .
+							      >		.section	.text._ZN9__gnu_cxx13new_allocatorIiE
+							      >		.align 2
+							      >		.weak	_ZN9__gnu_cxx13new_allocatorIiE10deallocateEP
+							      >		.type	_ZN9__gnu_cxx13new_allocatorIiE10deallocateEP
+							      >	_ZN9__gnu_cxx13new_allocatorIiE10deallocateEPij:
+							      >	.LFB2589:
+							      >		pushl	%ebp
+							      >	.LCFI129:
+							      >		movl	%esp, %ebp
+							      >	.LCFI130:
+							      >		subl	$8, %esp
+							      >	.LCFI131:
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZdlPv
+							      >		leave
+							      >		ret
+							      >	.LFE2589:
+							      >		.size	_ZN9__gnu_cxx13new_allocatorIiE10deallocateEP
+							      >		.section	.text._ZNSt12_Vector_baseIiSaIiEE13_M
+							      >		.align 2
+							      >		.weak	_ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPi
+							      >		.type	_ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPi
+							      >	_ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPij:
+							      >	.LFB2578:
+							      >		pushl	%ebp
+							      >	.LCFI132:
+							      >		movl	%esp, %ebp
+							      >	.LCFI133:
+							      >		subl	$24, %esp
+							      >	.LCFI134:
+							      >		cmpl	$0, 12(%ebp)
+							      >		je	.L136
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, %edx
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZN9__gnu_cxx13new_allocatorIiE10deallocateEP
+							      >	.L136:
+							      >		leave
+							      >		ret
+							      >	.LFE2578:
+							      >		.size	_ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPi
+							      >		.section	.rodata
+							      >	.LC0:
+							      >		.string	"vector::_M_insert_aux"
+							      >		.section	.text._ZNSt6vectorIiSaIiEE13_M_insert
+							      >		.align 2
+							      >		.weak	_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_c
+							      >		.type	_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_c
+							      >	_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_cxx17__normal_ite
+							      >	.LFB2573:
+							      >		pushl	%ebp
+							      >	.LCFI135:
+							      >		movl	%esp, %ebp
+							      >	.LCFI136:
+							      >		pushl	%esi
+							      >	.LCFI137:
+							      >		pushl	%ebx
+							      >	.LCFI138:
+							      >		subl	$64, %esp
+							      >	.LCFI139:
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	8(%eax), %eax
+							      >		cmpl	%eax, %edx
+							      >		je	.L138
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %eax
+							      >		leal	-4(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %ecx
+							      >		movl	8(%ebp), %eax
+							      >		movl	%edx, 8(%esp)
+							      >		movl	%ecx, 4(%esp)
+							      >		movl	%eax, (%esp)
+							      >		call	_ZN9__gnu_cxx13new_allocatorIiE9constructEPiR
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %eax
+							      >		leal	4(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	%edx, 4(%eax)
+							      >		movl	16(%ebp), %eax
+							      >		movl	(%eax), %eax
+							      >		movl	%eax, -16(%ebp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %eax
+							      >		leal	-4(%eax), %ebx
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %eax
+							      >		leal	-8(%eax), %esi
+							      >		leal	12(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vector
+							      >		movl	(%eax), %eax
+							      >		movl	%ebx, 8(%esp)
+							      >		movl	%esi, 4(%esp)
+							      >		movl	%eax, (%esp)
+							      >		call	_ZSt13copy_backwardIPiS0_ET0_T_S2_S1_
+							      >		leal	12(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vector
+							      >		movl	%eax, %edx
+							      >		movl	-16(%ebp), %eax
+							      >		movl	%eax, (%edx)
+							      >		jmp	.L148
+							      >	.L138:
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNKSt6vectorIiSaIiEE4sizeEv
+							      >		movl	%eax, -20(%ebp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNKSt6vectorIiSaIiEE8max_sizeEv
+							      >		cmpl	-20(%ebp), %eax
+							      >		sete	%al
+							      >		testb	%al, %al
+							      >		je	.L141
+							      >		movl	$.LC0, (%esp)
+							      >		call	_ZSt20__throw_length_errorPKc
+							      >	.L141:
+							      >		cmpl	$0, -20(%ebp)
+							      >		je	.L143
+							      >		movl	-20(%ebp), %eax
+							      >		addl	%eax, %eax
+							      >		movl	%eax, -44(%ebp)
+							      >		jmp	.L145
+							      >	.L143:
+							      >		movl	$1, -44(%ebp)
+							      >	.L145:
+							      >		movl	-44(%ebp), %eax
+							      >		movl	%eax, -24(%ebp)
+							      >		movl	-24(%ebp), %eax
+							      >		cmpl	-20(%ebp), %eax
+							      >		jae	.L146
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNKSt6vectorIiSaIiEE8max_sizeEv
+							      >		movl	%eax, -24(%ebp)
+							      >	.L146:
+							      >		movl	8(%ebp), %edx
+							      >		movl	-24(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZNSt12_Vector_baseIiSaIiEE11_M_allocateEj
+							      >		movl	%eax, -28(%ebp)
+							      >		movl	-28(%ebp), %eax
+							      >		movl	%eax, -32(%ebp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloca
+							      >		movl	%eax, 4(%esp)
+							      >		leal	-9(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSaIiEC1ERKS_
+							      >		leal	12(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vector
+							      >		movl	(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %ecx
+							      >		leal	-9(%ebp), %eax
+							      >		movl	%eax, 12(%esp)
+							      >		movl	-28(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	%edx, 4(%esp)
+							      >		movl	%ecx, (%esp)
+							      >		call	_ZSt22__uninitialized_copy_aIPiS0_iET0_T_S2_S
+							      >		movl	%eax, -32(%ebp)
+							      >		leal	-9(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSaIiED1Ev
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, %edx
+							      >		movl	16(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	-32(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZN9__gnu_cxx13new_allocatorIiE9constructEPiR
+							      >		addl	$4, -32(%ebp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloca
+							      >		movl	%eax, 4(%esp)
+							      >		leal	-10(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSaIiEC1ERKS_
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %ebx
+							      >		leal	12(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vector
+							      >		movl	(%eax), %edx
+							      >		leal	-10(%ebp), %eax
+							      >		movl	%eax, 12(%esp)
+							      >		movl	-32(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	%ebx, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZSt22__uninitialized_copy_aIPiS0_iET0_T_S2_S
+							      >		movl	%eax, -32(%ebp)
+							      >		leal	-10(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSaIiED1Ev
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloca
+							      >		movl	%eax, 4(%esp)
+							      >		leal	-12(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSaIiEC1ERKS_
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %ecx
+							      >		leal	-12(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	%edx, 4(%esp)
+							      >		movl	%ecx, (%esp)
+							      >		call	_ZSt8_DestroyIPiiEvT_S1_SaIT0_E
+							      >		leal	-12(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSaIiED1Ev
+							      >		movl	8(%ebp), %eax
+							      >		movl	8(%eax), %eax
+							      >		movl	%eax, %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %eax
+							      >		movl	%edx, %ecx
+							      >		subl	%eax, %ecx
+							      >		movl	%ecx, %eax
+							      >		sarl	$2, %eax
+							      >		movl	%eax, %ecx
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %eax
+							      >		movl	8(%ebp), %edx
+							      >		movl	%ecx, 8(%esp)
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPi
+							      >		movl	8(%ebp), %edx
+							      >		movl	-28(%ebp), %eax
+							      >		movl	%eax, (%edx)
+							      >		movl	8(%ebp), %edx
+							      >		movl	-32(%ebp), %eax
+							      >		movl	%eax, 4(%edx)
+							      >		movl	-24(%ebp), %eax
+							      >		sall	$2, %eax
+							      >		movl	%eax, %edx
+							      >		addl	-28(%ebp), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	%edx, 8(%eax)
+							      >	.L148:
+							      >		addl	$64, %esp
+							      >		popl	%ebx
+							      >		popl	%esi
+							      >		popl	%ebp
+							      >		ret
+							      >	.LFE2573:
+							      >		.size	_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_c
+							      >		.section	.text._ZNSt6vectorIiSaIiEE9push_backE
+							      >		.align 2
+							      >		.weak	_ZNSt6vectorIiSaIiEE9push_backERKi
+							      >		.type	_ZNSt6vectorIiSaIiEE9push_backERKi, @function
+							      >	_ZNSt6vectorIiSaIiEE9push_backERKi:
+							      >	.LFB2548:
+							      >		pushl	%ebp
+							      >	.LCFI140:
+							      >		movl	%esp, %ebp
+							      >	.LCFI141:
+							      >		subl	$40, %esp
+							      >	.LCFI142:
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	8(%eax), %eax
+							      >		cmpl	%eax, %edx
+							      >		je	.L150
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, %ecx
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	%edx, 4(%esp)
+							      >		movl	%ecx, (%esp)
+							      >		call	_ZN9__gnu_cxx13new_allocatorIiE9constructEPiR
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %eax
+							      >		leal	4(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	%edx, 4(%eax)
+							      >		jmp	.L153
+							      >	.L150:
+							      >		leal	-4(%ebp), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	%edx, (%esp)
+							      >		call	_ZNSt6vectorIiSaIiEE3endEv
+							      >		subl	$4, %esp
+							      >		movl	12(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	-4(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_c
+							      >	.L153:
+	leave								leave
+	ret								ret
+.LFE2605:						      |	.LFE2548:
+	.size	_GLOBAL__I__Z16depthFirstSearchPSt6vectorIiSa |		.size	_ZNSt6vectorIiSaIiEE9push_backERKi, .-_ZNSt6v
+							      >		.section	.text._ZNSt12_Vector_baseIiSaIiEED2Ev
+	.align 2							.align 2
+	.type	__tcf_0, @function			      |		.weak	_ZNSt12_Vector_baseIiSaIiEED2Ev
+__tcf_0:						      |		.type	_ZNSt12_Vector_baseIiSaIiEED2Ev, @function
+.LFB2604:						      |	_ZNSt12_Vector_baseIiSaIiEED2Ev:
+							      >	.LFB2568:
+	pushl	%ebp							pushl	%ebp
+.LCFI12:						      |	.LCFI143:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI13:						      |	.LCFI144:
+	subl	$8, %esp				      |		subl	$24, %esp
+.LCFI14:						      |	.LCFI145:
+	movl	$_ZSt8__ioinit, (%esp)			      |		movl	8(%ebp), %eax
+	call	_ZNSt8ios_base4InitD1Ev			      |		movl	8(%eax), %eax
+							      >		movl	%eax, %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %eax
+							      >		movl	%edx, %ecx
+							      >		subl	%eax, %ecx
+							      >		movl	%ecx, %eax
+							      >		sarl	$2, %eax
+							      >		movl	%eax, %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %eax
+							      >		movl	%edx, 8(%esp)
+							      >		movl	%eax, 4(%esp)
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPi
+							      >		movl	8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD1Ev
+	leave								leave
+	ret								ret
+.LFE2604:						      |	.LFE2568:
+	.size	__tcf_0, .-__tcf_0			      |		.size	_ZNSt12_Vector_baseIiSaIiEED2Ev, .-_ZNSt12_Ve
+	.section	.rodata.str1.1,"aMS",@progbits,1      |		.section	.text._ZNSt6vectorIiSaIiEED1Ev,"axG",
+.LC0:							      <
+	.string	"vector::_M_insert_aux"			      <
+	.section	.text._ZNSt6vectorIiSaIiEE13_M_insert <
+	.align 2							.align 2
+	.weak	_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_c |		.weak	_ZNSt6vectorIiSaIiEED1Ev
+	.type	_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_c |		.type	_ZNSt6vectorIiSaIiEED1Ev, @function
+_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_cxx17__normal_ite |	_ZNSt6vectorIiSaIiEED1Ev:
+.LFB2573:						      |	.LFB2547:
+	pushl	%ebp							pushl	%ebp
+.LCFI15:						      |	.LCFI146:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI16:						      |	.LCFI147:
+	subl	$40, %esp						subl	$40, %esp
+.LCFI17:						      |	.LCFI148:
+	movl	%ebx, -12(%ebp)				      |		movl	8(%ebp), %eax
+.LCFI18:						      |		movl	%eax, (%esp)
+	movl	%esi, -8(%ebp)				      |		call	_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_alloca
+.LCFI19:						      <
+	movl	%edi, -4(%ebp)				      <
+.LCFI20:						      <
+	movl	8(%ebp), %esi				      <
+	movl	12(%ebp), %edi				      <
+	movl	4(%esi), %edx				      <
+	cmpl	8(%esi), %edx				      <
+	je	.L25					      <
+	testl	%edx, %edx				      <
+	je	.L27					      <
+	movl	-4(%edx), %eax				      <
+	movl	%eax, (%edx)				      <
+.L27:							      <
+	movl	4(%esi), %edx				      <
+	leal	4(%edx), %eax				      <
+	movl	%eax, 4(%esi)				      <
+	movl	16(%ebp), %eax				      <
+	movl	(%eax), %ebx				      <
+	leal	-4(%edx), %eax				      <
+	subl	%edi, %eax				      <
+	andl	$-4, %eax				      <
+	movl	%eax, 8(%esp)				      <
+	movl	%edi, 4(%esp)				      <
+	subl	%eax, %edx				      <
+	movl	%edx, (%esp)				      <
+	call	memmove					      <
+	movl	%ebx, (%edi)				      <
+	jmp	.L43					      <
+.L25:							      <
+	movl	%edx, %eax				      <
+	subl	(%esi), %eax				      <
+	sarl	$2, %eax				      <
+	cmpl	$1073741823, %eax			      <
+	jne	.L30					      <
+	movl	$.LC0, (%esp)				      <
+	call	_ZSt20__throw_length_errorPKc		      <
+.L30:							      <
+	movl	$1, %edx				      <
+	testl	%eax, %eax				      <
+	je	.L34					      <
+	leal	(%eax,%eax), %edx			      <
+.L34:							      <
+	cmpl	%eax, %edx				      <
+	jb	.L35					      <
+	cmpl	$1073741823, %edx			      <
+	jbe	.L37					      <
+	.p2align 4,,5					      <
+	call	_ZSt17__throw_bad_allocv		      <
+.L35:							      <
+	movl	$1073741823, %edx			      <
+.L37:							      <
+	sall	$2, %edx				      <
+	movl	%edx, -20(%ebp)				      <
+	movl	%edx, (%esp)				      <
+	call	_Znwj					      <
+	movl	%eax, -24(%ebp)				      <
+	movl	(%esi), %eax				      <
+	movl	%edi, %ebx				      <
+	subl	%eax, %ebx				      <
+	andl	$-4, %ebx				      <
+	movl	%ebx, 8(%esp)				      <
+	movl	%eax, 4(%esp)						movl	%eax, 4(%esp)
+	movl	-24(%ebp), %ecx				      |		leal	-1(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSaIiEC1ERKS_
+							      >		movl	8(%ebp), %eax
+							      >		movl	4(%eax), %edx
+							      >		movl	8(%ebp), %eax
+							      >		movl	(%eax), %ecx
+							      >		leal	-1(%ebp), %eax
+							      >		movl	%eax, 8(%esp)
+							      >		movl	%edx, 4(%esp)
+	movl	%ecx, (%esp)						movl	%ecx, (%esp)
+	call	memmove					      |		call	_ZSt8_DestroyIPiiEvT_S1_SaIT0_E
+	movl	-24(%ebp), %edx				      |		leal	-1(%ebp), %eax
+	addl	%ebx, %edx				      <
+	je	.L39					      <
+	movl	16(%ebp), %ecx				      <
+	movl	(%ecx), %eax				      <
+	movl	%eax, (%edx)				      <
+.L39:							      <
+	addl	$4, %edx				      <
+	movl	%edx, -16(%ebp)				      <
+	movl	4(%esi), %eax				      <
+	subl	%edi, %eax				      <
+	movl	%eax, %ebx				      <
+	andl	$-4, %ebx				      <
+	movl	%ebx, 8(%esp)				      <
+	movl	%edi, 4(%esp)				      <
+	movl	%edx, (%esp)				      <
+	call	memmove					      <
+	movl	(%esi), %eax				      <
+	testl	%eax, %eax				      <
+	je	.L41					      <
+	movl	%eax, (%esp)						movl	%eax, (%esp)
+	call	_ZdlPv					      |		call	_ZNSaIiED1Ev
+.L41:							      |		movl	8(%ebp), %eax
+	movl	-24(%ebp), %ecx				      |		movl	%eax, (%esp)
+	movl	%ecx, (%esi)				      |		call	_ZNSt12_Vector_baseIiSaIiEED2Ev
+	movl	-16(%ebp), %eax				      |		leave
+	addl	%ebx, %eax				      <
+	movl	%eax, 4(%esi)				      <
+	movl	%ecx, %eax				      <
+	addl	-20(%ebp), %eax				      <
+	movl	%eax, 8(%esi)				      <
+.L43:							      <
+	movl	-12(%ebp), %ebx				      <
+	movl	-8(%ebp), %esi				      <
+	movl	-4(%ebp), %edi				      <
+	movl	%ebp, %esp				      <
+	popl	%ebp					      <
+	ret								ret
+.LFE2573:						      |	.LFE2547:
+	.size	_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_c |		.size	_ZNSt6vectorIiSaIiEED1Ev, .-_ZNSt6vectorIiSaI
+	.section	.rodata.str1.1			      |		.section	.rodata
+.LC1:								.LC1:
+	.string	"%d"							.string	"%d"
+.LC2:								.LC2:
+	.string	"%d%d"							.string	"%d%d"
+.LC3:								.LC3:
+	.string	""							.string	""
+.LC4:								.LC4:
+	.string	"NOT "							.string	"NOT "
+.LC5:								.LC5:
+	.string	"BICOLORABLE."						.string	"BICOLORABLE."
+.globl _Unwind_Resume						.globl _Unwind_Resume
+	.text								.text
+	.align 2							.align 2
+.globl main							.globl main
+	.type	main, @function						.type	main, @function
+main:								main:
+.LFB2525:							.LFB2525:
+	leal	4(%esp), %ecx						leal	4(%esp), %ecx
+.LCFI21:						      |	.LCFI149:
+	andl	$-16, %esp						andl	$-16, %esp
+	pushl	-4(%ecx)						pushl	-4(%ecx)
+.LCFI22:						      |	.LCFI150:
+	pushl	%ebp							pushl	%ebp
+.LCFI23:						      |	.LCFI151:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI24:						      |	.LCFI152:
+	pushl	%edi					      <
+.LCFI25:						      <
+	pushl	%esi					      <
+.LCFI26:						      <
+	pushl	%ebx					      <
+.LCFI27:						      <
+	pushl	%ecx							pushl	%ecx
+.LCFI28:						      |	.LCFI153:
+	subl	$72, %esp				      |		subl	$116, %esp
+.LCFI29:						      |	.LCFI154:
+	movl	%gs:20, %eax						movl	%gs:20, %eax
+	movl	%eax, -20(%ebp)				      |		movl	%eax, -8(%ebp)
+	xorl	%eax, %eax						xorl	%eax, %eax
+	jmp	.L45					      |		jmp	.L161
+.L47:							      |	.L162:
+	movl	$0, (%eax)				      |		movl	%esp, %eax
+	movl	$0, 4(%eax)				      |		movl	%eax, -48(%ebp)
+	movl	$0, 8(%eax)				      |		movl	-16(%ebp), %eax
+	addl	$12, %eax				      |		subl	$1, %eax
+	addl	$1, %edx				      |		movl	%eax, -88(%ebp)
+	cmpl	%ecx, %edx				      |		movl	-88(%ebp), %eax
+	jne	.L47					      |		leal	1(%eax), %edx
+.L48:							      |		movl	%edx, %eax
+	movl	-24(%ebp), %eax				      |		addl	%eax, %eax
+							      >		addl	%edx, %eax
+	sall	$2, %eax						sall	$2, %eax
+	leal	30(%eax), %edx				      |		addl	$15, %eax
+	andl	$-16, %edx				      |		addl	$15, %eax
+	subl	%edx, %esp				      |		shrl	$4, %eax
+	leal	31(%esp), %edx				      |		sall	$4, %eax
+	andl	$-16, %edx				      |		subl	%eax, %esp
+	movl	%edx, -60(%ebp)				      |		leal	16(%esp), %edx
+							      >		movl	%edx, -84(%ebp)
+							      >		movl	-84(%ebp), %eax
+							      >		addl	$15, %eax
+							      >		shrl	$4, %eax
+							      >		sall	$4, %eax
+							      >		movl	%eax, -84(%ebp)
+							      >		movl	-84(%ebp), %eax
+							      >		movl	%eax, -32(%ebp)
+							      >		movl	-32(%ebp), %eax
+							      >		movl	%eax, -80(%ebp)
+							      >		movl	-88(%ebp), %edx
+							      >		movl	%edx, -76(%ebp)
+							      >		jmp	.L163
+							      >	.L164:
+							      >		leal	-9(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSaIiEC1Ev
+							      >		leal	-9(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	-80(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSt6vectorIiSaIiEEC1ERKS0_
+							      >		leal	-9(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_ZNSaIiED1Ev
+							      >		addl	$12, -80(%ebp)
+							      >		subl	$1, -76(%ebp)
+							      >	.L163:
+							      >		cmpl	$-1, -76(%ebp)
+							      >		jne	.L164
+							      >		movl	-16(%ebp), %eax
+							      >		leal	-1(%eax), %edx
+							      >		movl	%edx, %eax
+							      >		addl	$1, %eax
+							      >		sall	$2, %eax
+							      >		addl	$15, %eax
+							      >		addl	$15, %eax
+							      >		shrl	$4, %eax
+							      >		sall	$4, %eax
+							      >		subl	%eax, %esp
+							      >		leal	16(%esp), %eax
+							      >		movl	%eax, -72(%ebp)
+							      >		movl	-72(%ebp), %eax
+							      >		addl	$15, %eax
+							      >		shrl	$4, %eax
+							      >		sall	$4, %eax
+							      >		movl	%eax, -72(%ebp)
+							      >		movl	-72(%ebp), %eax
+							      >		movl	%eax, -36(%ebp)
+							      >		movl	%edx, %eax
+							      >		addl	$1, %eax
+							      >		sall	$2, %eax
+							      >		movl	-36(%ebp), %edx
+	movl	%eax, 8(%esp)						movl	%eax, 8(%esp)
+	movl	$0, 4(%esp)						movl	$0, 4(%esp)
+	movl	%edx, (%esp)						movl	%edx, (%esp)
+	call	memset							call	memset
+	leal	-28(%ebp), %edx				      |		leal	-20(%ebp), %eax
+	movl	%edx, 4(%esp)				      |		movl	%eax, 4(%esp)
+	movl	$.LC1, (%esp)						movl	$.LC1, (%esp)
+.LEHB0:								.LEHB0:
+	call	scanf							call	scanf
+	cmpl	$0, -28(%ebp)				      |		jmp	.L166
+	je	.L50					      |	.L167:
+	leal	-36(%ebp), %edi				      |		leal	-28(%ebp), %eax
+	leal	-32(%ebp), %esi				      |		movl	%eax, 8(%esp)
+.L85:							      |		leal	-24(%ebp), %eax
+	movl	%edi, 8(%esp)				      |		movl	%eax, 4(%esp)
+	movl	%esi, 4(%esp)				      <
+	movl	$.LC2, (%esp)						movl	$.LC2, (%esp)
+	call	scanf							call	scanf
+	movl	-32(%ebp), %ecx				      |		movl	-24(%ebp), %edx
+	leal	(%ecx,%ecx,2), %eax			      |		movl	%edx, %eax
+	leal	(%ebx,%eax,4), %eax			      |		addl	%eax, %eax
+	movl	4(%eax), %edx				      |		addl	%edx, %eax
+	cmpl	8(%eax), %edx				      |		sall	$2, %eax
+	je	.L52					      |		movl	%eax, %edx
+	testl	%edx, %edx				      |		addl	-32(%ebp), %edx
+	je	.L54					      |		leal	-28(%ebp), %eax
+	movl	-36(%ebp), %eax				      |		movl	%eax, 4(%esp)
+	movl	%eax, (%edx)				      |		movl	%edx, (%esp)
+.L54:							      |		call	_ZNSt6vectorIiSaIiEE9push_backERKi
+	leal	(%ecx,%ecx,2), %eax			      |		movl	-28(%ebp), %edx
+	addl	$4, 4(%ebx,%eax,4)			      |		movl	%edx, %eax
+	jmp	.L56					      |		addl	%eax, %eax
+.L52:							      |		addl	%edx, %eax
+	movl	%edi, 8(%esp)				      |		sall	$2, %eax
+	movl	%edx, 4(%esp)				      |		movl	%eax, %edx
+	leal	(%ecx,%ecx,2), %eax			      |		addl	-32(%ebp), %edx
+	leal	(%ebx,%eax,4), %eax			      |		leal	-24(%ebp), %eax
+	movl	%eax, (%esp)				      |		movl	%eax, 4(%esp)
+	call	_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_c |		movl	%edx, (%esp)
+.L56:							      |		call	_ZNSt6vectorIiSaIiEE9push_backERKi
+	movl	-36(%ebp), %ecx				      |		movl	-20(%ebp), %eax
+	leal	(%ecx,%ecx,2), %eax			      <
+	leal	(%ebx,%eax,4), %eax			      <
+	movl	4(%eax), %edx				      <
+	cmpl	8(%eax), %edx				      <
+	je	.L57					      <
+	testl	%edx, %edx				      <
+	je	.L59					      <
+	movl	-32(%ebp), %eax				      <
+	movl	%eax, (%edx)				      <
+.L59:							      <
+	leal	(%ecx,%ecx,2), %eax			      <
+	addl	$4, 4(%ebx,%eax,4)			      <
+	jmp	.L61					      <
+.L57:							      <
+	movl	%esi, 8(%esp)				      <
+	movl	%edx, 4(%esp)				      <
+	leal	(%ecx,%ecx,2), %eax			      <
+	leal	(%ebx,%eax,4), %eax			      <
+	movl	%eax, (%esp)				      <
+	call	_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_c <
+.L61:							      <
+	movl	-28(%ebp), %eax				      <
+	subl	$1, %eax						subl	$1, %eax
+	movl	%eax, -28(%ebp)				      |		movl	%eax, -20(%ebp)
+							      >	.L166:
+							      >		movl	-20(%ebp), %eax
+	testl	%eax, %eax						testl	%eax, %eax
+	jne	.L85					      |		jne	.L167
+.L50:							      |		movl	-36(%ebp), %eax
+							      >		movl	-32(%ebp), %edx
+	movl	$1, 12(%esp)						movl	$1, 12(%esp)
+	movl	$0, 8(%esp)						movl	$0, 8(%esp)
+	movl	-60(%ebp), %eax				      <
+	movl	%eax, 4(%esp)						movl	%eax, 4(%esp)
+	movl	-52(%ebp), %edx				      <
+	movl	%edx, (%esp)						movl	%edx, (%esp)
+	call	_Z16depthFirstSearchPSt6vectorIiSaIiEEPiii		call	_Z16depthFirstSearchPSt6vectorIiSaIiEEPiii
+	movl	$.LC3, %edx				      <
+	testb	%al, %al						testb	%al, %al
+	jne	.L64					      |		je	.L169
+	movl	$.LC4, %edx				      |		movl	$.LC3, -68(%ebp)
+.L64:							      |		jmp	.L171
+							      >	.L169:
+							      >		movl	$.LC4, -68(%ebp)
+							      >	.L171:
+							      >		movl	-68(%ebp), %edx
+	movl	%edx, (%esp)						movl	%edx, (%esp)
+	call	printf							call	printf
+	movl	$.LC5, (%esp)						movl	$.LC5, (%esp)
+	call	puts							call	puts
+.LEHE0:								.LEHE0:
+	jmp	.L88					      |		movl	-88(%ebp), %eax
+.L81:							      |		movl	%eax, -64(%ebp)
+.L66:							      |		movl	-64(%ebp), %edx
+	movl	%eax, %esi				      |		addl	$1, %edx
+	addl	-64(%ebp), %ebx				      |		movl	%edx, -60(%ebp)
+.L93:							      |		movl	-60(%ebp), %eax
+	cmpl	-52(%ebp), %ebx				      |		addl	%eax, %eax
+	je	.L68					      |		addl	-60(%ebp), %eax
+	subl	$12, %ebx				      |		sall	$2, %eax
+	movl	(%ebx), %eax				      |		movl	%eax, -56(%ebp)
+	testl	%eax, %eax				      |		movl	-56(%ebp), %eax
+	je	.L93					      |		addl	-32(%ebp), %eax
+							      >		movl	%eax, -44(%ebp)
+							      >		jmp	.L172
+							      >	.L187:
+							      >		movl	%eax, -96(%ebp)
+							      >	.L173:
+							      >		movl	-96(%ebp), %edx
+							      >		movl	%edx, -40(%ebp)
+							      >		movl	-88(%ebp), %eax
+							      >		movl	%eax, -64(%ebp)
+							      >		movl	-64(%ebp), %edx
+							      >		addl	$1, %edx
+							      >		movl	%edx, -60(%ebp)
+							      >		movl	-60(%ebp), %eax
+							      >		addl	%eax, %eax
+							      >		addl	-60(%ebp), %eax
+							      >		sall	$2, %eax
+							      >		movl	%eax, -56(%ebp)
+							      >		movl	-56(%ebp), %eax
+							      >		addl	-32(%ebp), %eax
+							      >		movl	%eax, -44(%ebp)
+							      >	.L174:
+							      >		movl	-32(%ebp), %edx
+							      >		movl	%edx, -52(%ebp)
+							      >		movl	-52(%ebp), %eax
+							      >		cmpl	%eax, -44(%ebp)
+							      >		je	.L175
+							      >		subl	$12, -44(%ebp)
+							      >		movl	-44(%ebp), %edx
+							      >		movl	%edx, (%esp)
+							      >		call	_ZNSt6vectorIiSaIiEED1Ev
+							      >		jmp	.L174
+							      >	.L175:
+							      >		movl	-40(%ebp), %eax
+							      >		movl	%eax, -96(%ebp)
+							      >		jmp	.L179
+							      >	.L172:
+							      >		movl	-32(%ebp), %edx
+							      >		movl	%edx, -52(%ebp)
+							      >		movl	-52(%ebp), %eax
+							      >		cmpl	%eax, -44(%ebp)
+							      >		je	.L177
+							      >		subl	$12, -44(%ebp)
+							      >		movl	-44(%ebp), %edx
+							      >		movl	%edx, (%esp)
+							      >		call	_ZNSt6vectorIiSaIiEED1Ev
+							      >		jmp	.L172
+							      >	.L177:
+							      >		movl	-48(%ebp), %esp
+							      >		jmp	.L161
+							      >	.L188:
+							      >	.L179:
+							      >		movl	-96(%ebp), %eax
+							      >		movl	-48(%ebp), %esp
+							      >		movl	%eax, -96(%ebp)
+							      >		movl	-96(%ebp), %eax
+	movl	%eax, (%esp)						movl	%eax, (%esp)
+	call	_ZdlPv					      <
+	jmp	.L93					      <
+.L68:							      <
+.L75:							      <
+	movl	-56(%ebp), %esp				      <
+	movl	%esi, (%esp)				      <
+.LEHB1:								.LEHB1:
+	call	_Unwind_Resume						call	_Unwind_Resume
+.L88:							      |	.L161:
+	addl	-64(%ebp), %ebx				      |		leal	-16(%ebp), %eax
+.L94:							      <
+	cmpl	-52(%ebp), %ebx				      <
+	je	.L72					      <
+	subl	$12, %ebx				      <
+	movl	(%ebx), %eax				      <
+	testl	%eax, %eax				      <
+	je	.L94					      <
+	movl	%eax, (%esp)				      <
+	call	_ZdlPv					      <
+	jmp	.L94					      <
+.L82:							      <
+.L72:							      <
+	movl	-56(%ebp), %esp				      <
+.L45:							      <
+	leal	-24(%ebp), %eax				      <
+	movl	%eax, 4(%esp)						movl	%eax, 4(%esp)
+	movl	$.LC1, (%esp)						movl	$.LC1, (%esp)
+	call	scanf							call	scanf
+.LEHE1:								.LEHE1:
+	testl	%eax, %eax						testl	%eax, %eax
+	je	.L76					      |		je	.L180
+	cmpl	$0, -24(%ebp)				      |		movl	-16(%ebp), %eax
+	je	.L76					      |		testl	%eax, %eax
+	movl	%esp, -56(%ebp)				      |		je	.L180
+	movl	-24(%ebp), %ecx				      |		movb	$1, -89(%ebp)
+	leal	(%ecx,%ecx,2), %eax			      |		jmp	.L183
+	sall	$2, %eax				      |	.L180:
+	movl	%eax, -64(%ebp)				      |		movb	$0, -89(%ebp)
+	addl	$30, %eax				      |	.L183:
+	andl	$-16, %eax				      |		movzbl	-89(%ebp), %eax
+	subl	%eax, %esp				      |		testb	%al, %al
+	leal	31(%esp), %eax				      |		jne	.L162
+	movl	%eax, %ebx				      <
+	andl	$-16, %ebx				      <
+	movl	%ebx, -52(%ebp)				      <
+	movl	%ebx, %eax				      <
+	movl	$0, %edx				      <
+	testl	%ecx, %ecx				      <
+	jne	.L47					      <
+	jmp	.L48					      <
+.L76:							      <
+	movl	$0, %eax						movl	$0, %eax
+	movl	-20(%ebp), %edx				      |		movl	-8(%ebp), %edx
+	xorl	%gs:20, %edx						xorl	%gs:20, %edx
+	je	.L80					      |		je	.L186
+	.p2align 4,,7					      <
+	call	__stack_chk_fail					call	__stack_chk_fail
+.L80:							      |	.L186:
+	leal	-16(%ebp), %esp				      |		movl	-4(%ebp), %ecx
+	popl	%ecx					      |		leave
+	popl	%ebx					      <
+	popl	%esi					      <
+	popl	%edi					      <
+	popl	%ebp					      <
+	leal	-4(%ecx), %esp						leal	-4(%ecx), %esp
+	ret								ret
+.LFE2525:							.LFE2525:
+	.size	main, .-main						.size	main, .-main
+	.section	.gcc_except_table,"a",@progbits			.section	.gcc_except_table,"a",@progbits
+.LLSDA2525:							.LLSDA2525:
+	.byte	0xff							.byte	0xff
+	.byte	0xff							.byte	0xff
+	.byte	0x1							.byte	0x1
+	.uleb128 .LLSDACSE2525-.LLSDACSB2525				.uleb128 .LLSDACSE2525-.LLSDACSB2525
+.LLSDACSB2525:							.LLSDACSB2525:
+	.uleb128 .LEHB0-.LFB2525					.uleb128 .LEHB0-.LFB2525
+	.uleb128 .LEHE0-.LEHB0						.uleb128 .LEHE0-.LEHB0
+	.uleb128 .L81-.LFB2525				      |		.uleb128 .L187-.LFB2525
+	.uleb128 0x0							.uleb128 0x0
+	.uleb128 .LEHB1-.LFB2525					.uleb128 .LEHB1-.LFB2525
+	.uleb128 .LEHE1-.LEHB1						.uleb128 .LEHE1-.LEHB1
+	.uleb128 0x0							.uleb128 0x0
+	.uleb128 0x0							.uleb128 0x0
+.LLSDACSE2525:							.LLSDACSE2525:
+	.text								.text
+	.local	_ZSt8__ioinit						.local	_ZSt8__ioinit
+	.comm	_ZSt8__ioinit,1,1					.comm	_ZSt8__ioinit,1,1
+	.weakref	_Z20__gthrw_pthread_oncePiPFvvE,pthre		.weakref	_Z20__gthrw_pthread_oncePiPFvvE,pthre
+	.weakref	_Z27__gthrw_pthread_getspecificj,pthr		.weakref	_Z27__gthrw_pthread_getspecificj,pthr
+	.weakref	_Z27__gthrw_pthread_setspecificjPKv,p		.weakref	_Z27__gthrw_pthread_setspecificjPKv,p
+	.weakref	_Z22__gthrw_pthread_createPmPK14pthre		.weakref	_Z22__gthrw_pthread_createPmPK14pthre
+	.weakref	_Z22__gthrw_pthread_cancelm,pthread_c		.weakref	_Z22__gthrw_pthread_cancelm,pthread_c
+	.weakref	_Z26__gthrw_pthread_mutex_lockP15pthr		.weakref	_Z26__gthrw_pthread_mutex_lockP15pthr
+	.weakref	_Z29__gthrw_pthread_mutex_trylockP15p		.weakref	_Z29__gthrw_pthread_mutex_trylockP15p
+	.weakref	_Z28__gthrw_pthread_mutex_unlockP15pt		.weakref	_Z28__gthrw_pthread_mutex_unlockP15pt
+	.weakref	_Z26__gthrw_pthread_mutex_initP15pthr		.weakref	_Z26__gthrw_pthread_mutex_initP15pthr
+	.weakref	_Z26__gthrw_pthread_key_createPjPFvPv		.weakref	_Z26__gthrw_pthread_key_createPjPFvPv
+	.weakref	_Z26__gthrw_pthread_key_deletej,pthre		.weakref	_Z26__gthrw_pthread_key_deletej,pthre
+	.weakref	_Z30__gthrw_pthread_mutexattr_initP19		.weakref	_Z30__gthrw_pthread_mutexattr_initP19
+	.weakref	_Z33__gthrw_pthread_mutexattr_settype		.weakref	_Z33__gthrw_pthread_mutexattr_settype
+	.weakref	_Z33__gthrw_pthread_mutexattr_destroy		.weakref	_Z33__gthrw_pthread_mutexattr_destroy
+	.section	.eh_frame,"a",@progbits				.section	.eh_frame,"a",@progbits
+.Lframe1:							.Lframe1:
+	.long	.LECIE1-.LSCIE1						.long	.LECIE1-.LSCIE1
+.LSCIE1:							.LSCIE1:
+	.long	0x0							.long	0x0
+	.byte	0x1							.byte	0x1
+	.string	"zPL"							.string	"zPL"
+	.uleb128 0x1							.uleb128 0x1
+	.sleb128 -4							.sleb128 -4
+	.byte	0x8							.byte	0x8
+	.uleb128 0x6							.uleb128 0x6
+	.byte	0x0							.byte	0x0
+	.long	__gxx_personality_v0					.long	__gxx_personality_v0
+	.byte	0x0							.byte	0x0
+	.byte	0xc							.byte	0xc
+	.uleb128 0x4							.uleb128 0x4
+	.uleb128 0x4							.uleb128 0x4
+	.byte	0x88							.byte	0x88
+	.uleb128 0x1							.uleb128 0x1
+	.align 4							.align 4
+.LECIE1:							.LECIE1:
+.LSFDE1:						      |	.LSFDE5:
+	.long	.LEFDE1-.LASFDE1			      |		.long	.LEFDE5-.LASFDE5
+.LASFDE1:						      |	.LASFDE5:
+	.long	.LASFDE1-.Lframe1			      |		.long	.LASFDE5-.Lframe1
+							      >		.long	.LFB1358
+							      >		.long	.LFE1358-.LFB1358
+							      >		.uleb128 0x4
+							      >		.long	0x0
+							      >		.byte	0x4
+							      >		.long	.LCFI5-.LFB1358
+							      >		.byte	0xe
+							      >		.uleb128 0x8
+							      >		.byte	0x85
+							      >		.uleb128 0x2
+							      >		.byte	0x4
+							      >		.long	.LCFI6-.LCFI5
+							      >		.byte	0xd
+							      >		.uleb128 0x5
+							      >		.byte	0x4
+							      >		.long	.LCFI8-.LCFI6
+							      >		.byte	0x83
+							      >		.uleb128 0x3
+							      >		.align 4
+							      >	.LEFDE5:
+							      >	.LSFDE11:
+							      >		.long	.LEFDE11-.LASFDE11
+							      >	.LASFDE11:
+							      >		.long	.LASFDE11-.Lframe1
+	.long	.LFB2524						.long	.LFB2524
+	.long	.LFE2524-.LFB2524					.long	.LFE2524-.LFB2524
+	.uleb128 0x4							.uleb128 0x4
+	.long	0x0							.long	0x0
+	.byte	0x4							.byte	0x4
+	.long	.LCFI0-.LFB2524				      |		.long	.LCFI13-.LFB2524
+	.byte	0xe							.byte	0xe
+	.uleb128 0x8							.uleb128 0x8
+	.byte	0x85							.byte	0x85
+	.uleb128 0x2							.uleb128 0x2
+	.byte	0x4							.byte	0x4
+	.long	.LCFI1-.LCFI0				      |		.long	.LCFI14-.LCFI13
+	.byte	0xd							.byte	0xd
+	.uleb128 0x5							.uleb128 0x5
+	.byte	0x4							.byte	0x4
+	.long	.LCFI5-.LCFI1				      |		.long	.LCFI16-.LCFI14
+	.byte	0x83							.byte	0x83
+	.uleb128 0x5					      <
+	.byte	0x86					      <
+	.uleb128 0x4					      <
+	.byte	0x87					      <
+	.uleb128 0x3							.uleb128 0x3
+	.align 4							.align 4
+.LEFDE1:						      |	.LEFDE11:
+.LSFDE3:						      |	.LSFDE61:
+	.long	.LEFDE3-.LASFDE3			      |		.long	.LEFDE61-.LASFDE61
+.LASFDE3:						      |	.LASFDE61:
+	.long	.LASFDE3-.Lframe1			      |		.long	.LASFDE61-.Lframe1
+	.long	.LFB2603						.long	.LFB2603
+	.long	.LFE2603-.LFB2603					.long	.LFE2603-.LFB2603
+	.uleb128 0x4							.uleb128 0x4
+	.long	0x0							.long	0x0
+	.byte	0x4							.byte	0x4
+	.long	.LCFI6-.LFB2603				      |		.long	.LCFI80-.LFB2603
+	.byte	0xe							.byte	0xe
+	.uleb128 0x8							.uleb128 0x8
+	.byte	0x85							.byte	0x85
+	.uleb128 0x2							.uleb128 0x2
+	.byte	0x4							.byte	0x4
+	.long	.LCFI7-.LCFI6				      |		.long	.LCFI81-.LCFI80
+	.byte	0xd							.byte	0xd
+	.uleb128 0x5							.uleb128 0x5
+	.align 4							.align 4
+.LEFDE3:						      |	.LEFDE61:
+.LSFDE5:						      |	.LSFDE63:
+	.long	.LEFDE5-.LASFDE5			      |		.long	.LEFDE63-.LASFDE63
+.LASFDE5:						      |	.LASFDE63:
+	.long	.LASFDE5-.Lframe1			      |		.long	.LASFDE63-.Lframe1
+	.long	.LFB2605						.long	.LFB2605
+	.long	.LFE2605-.LFB2605					.long	.LFE2605-.LFB2605
+	.uleb128 0x4							.uleb128 0x4
+	.long	0x0							.long	0x0
+	.byte	0x4							.byte	0x4
+	.long	.LCFI9-.LFB2605				      |		.long	.LCFI83-.LFB2605
+	.byte	0xe							.byte	0xe
+	.uleb128 0x8							.uleb128 0x8
+	.byte	0x85							.byte	0x85
+	.uleb128 0x2							.uleb128 0x2
+	.byte	0x4							.byte	0x4
+	.long	.LCFI10-.LCFI9				      |		.long	.LCFI84-.LCFI83
+	.byte	0xd							.byte	0xd
+	.uleb128 0x5							.uleb128 0x5
+	.align 4							.align 4
+.LEFDE5:						      |	.LEFDE63:
+.LSFDE7:						      |	.LSFDE65:
+	.long	.LEFDE7-.LASFDE7			      |		.long	.LEFDE65-.LASFDE65
+.LASFDE7:						      |	.LASFDE65:
+	.long	.LASFDE7-.Lframe1			      |		.long	.LASFDE65-.Lframe1
+	.long	.LFB2604						.long	.LFB2604
+	.long	.LFE2604-.LFB2604					.long	.LFE2604-.LFB2604
+	.uleb128 0x4							.uleb128 0x4
+	.long	0x0							.long	0x0
+	.byte	0x4							.byte	0x4
+	.long	.LCFI12-.LFB2604			      |		.long	.LCFI86-.LFB2604
+							      >		.byte	0xe
+							      >		.uleb128 0x8
+							      >		.byte	0x85
+							      >		.uleb128 0x2
+							      >		.byte	0x4
+							      >		.long	.LCFI87-.LCFI86
+							      >		.byte	0xd
+							      >		.uleb128 0x5
+							      >		.align 4
+							      >	.LEFDE65:
+							      >	.LSFDE89:
+							      >		.long	.LEFDE89-.LASFDE89
+							      >	.LASFDE89:
+							      >		.long	.LASFDE89-.Lframe1
+							      >		.long	.LFB2594
+							      >		.long	.LFE2594-.LFB2594
+							      >		.uleb128 0x4
+							      >		.long	0x0
+							      >		.byte	0x4
+							      >		.long	.LCFI123-.LFB2594
+							      >		.byte	0xe
+							      >		.uleb128 0x8
+							      >		.byte	0x85
+							      >		.uleb128 0x2
+							      >		.byte	0x4
+							      >		.long	.LCFI124-.LCFI123
+							      >		.byte	0xd
+							      >		.uleb128 0x5
+							      >		.align 4
+							      >	.LEFDE89:
+							      >	.LSFDE91:
+							      >		.long	.LEFDE91-.LASFDE91
+							      >	.LASFDE91:
+							      >		.long	.LASFDE91-.Lframe1
+							      >		.long	.LFB2584
+							      >		.long	.LFE2584-.LFB2584
+							      >		.uleb128 0x4
+							      >		.long	0x0
+							      >		.byte	0x4
+							      >		.long	.LCFI126-.LFB2584
+	.byte	0xe							.byte	0xe
+	.uleb128 0x8							.uleb128 0x8
+	.byte	0x85							.byte	0x85
+	.uleb128 0x2							.uleb128 0x2
+	.byte	0x4							.byte	0x4
+	.long	.LCFI13-.LCFI12				      |		.long	.LCFI127-.LCFI126
+	.byte	0xd							.byte	0xd
+	.uleb128 0x5							.uleb128 0x5
+	.align 4							.align 4
+.LEFDE7:						      |	.LEFDE91:
+.LSFDE9:						      |	.LSFDE97:
+	.long	.LEFDE9-.LASFDE9			      |		.long	.LEFDE97-.LASFDE97
+.LASFDE9:						      |	.LASFDE97:
+	.long	.LASFDE9-.Lframe1			      |		.long	.LASFDE97-.Lframe1
+	.long	.LFB2573						.long	.LFB2573
+	.long	.LFE2573-.LFB2573					.long	.LFE2573-.LFB2573
+	.uleb128 0x4							.uleb128 0x4
+	.long	0x0							.long	0x0
+	.byte	0x4							.byte	0x4
+	.long	.LCFI15-.LFB2573			      |		.long	.LCFI135-.LFB2573
+	.byte	0xe							.byte	0xe
+	.uleb128 0x8							.uleb128 0x8
+	.byte	0x85							.byte	0x85
+	.uleb128 0x2							.uleb128 0x2
+	.byte	0x4							.byte	0x4
+	.long	.LCFI16-.LCFI15				      |		.long	.LCFI136-.LCFI135
+	.byte	0xd							.byte	0xd
+	.uleb128 0x5							.uleb128 0x5
+	.byte	0x4							.byte	0x4
+	.long	.LCFI20-.LCFI16				      |		.long	.LCFI139-.LCFI136
+	.byte	0x87					      |		.byte	0x83
+	.uleb128 0x3					      |		.uleb128 0x4
+	.byte	0x86							.byte	0x86
+							      >		.uleb128 0x3
+							      >		.align 4
+							      >	.LEFDE97:
+							      >	.LSFDE99:
+							      >		.long	.LEFDE99-.LASFDE99
+							      >	.LASFDE99:
+							      >		.long	.LASFDE99-.Lframe1
+							      >		.long	.LFB2548
+							      >		.long	.LFE2548-.LFB2548
+	.uleb128 0x4							.uleb128 0x4
+	.byte	0x83					      |		.long	0x0
+							      >		.byte	0x4
+							      >		.long	.LCFI140-.LFB2548
+							      >		.byte	0xe
+							      >		.uleb128 0x8
+							      >		.byte	0x85
+							      >		.uleb128 0x2
+							      >		.byte	0x4
+							      >		.long	.LCFI141-.LCFI140
+							      >		.byte	0xd
+	.uleb128 0x5							.uleb128 0x5
+	.align 4							.align 4
+.LEFDE9:						      |	.LEFDE99:
+.LSFDE11:						      |	.LSFDE105:
+	.long	.LEFDE11-.LASFDE11			      |		.long	.LEFDE105-.LASFDE105
+.LASFDE11:						      |	.LASFDE105:
+	.long	.LASFDE11-.Lframe1			      |		.long	.LASFDE105-.Lframe1
+	.long	.LFB2525						.long	.LFB2525
+	.long	.LFE2525-.LFB2525					.long	.LFE2525-.LFB2525
+	.uleb128 0x4							.uleb128 0x4
+	.long	.LLSDA2525						.long	.LLSDA2525
+	.byte	0x4							.byte	0x4
+	.long	.LCFI21-.LFB2525			      |		.long	.LCFI149-.LFB2525
+	.byte	0xc							.byte	0xc
+	.uleb128 0x1							.uleb128 0x1
+	.uleb128 0x0							.uleb128 0x0
+	.byte	0x9							.byte	0x9
+	.uleb128 0x4							.uleb128 0x4
+	.uleb128 0x1							.uleb128 0x1
+	.byte	0x4							.byte	0x4
+	.long	.LCFI22-.LCFI21				      |		.long	.LCFI150-.LCFI149
+	.byte	0xc							.byte	0xc
+	.uleb128 0x4							.uleb128 0x4
+	.uleb128 0x4							.uleb128 0x4
+	.byte	0x4							.byte	0x4
+	.long	.LCFI23-.LCFI22				      |		.long	.LCFI151-.LCFI150
+	.byte	0xe							.byte	0xe
+	.uleb128 0x8							.uleb128 0x8
+	.byte	0x85							.byte	0x85
+	.uleb128 0x2							.uleb128 0x2
+	.byte	0x4							.byte	0x4
+	.long	.LCFI24-.LCFI23				      |		.long	.LCFI152-.LCFI151
+	.byte	0xd							.byte	0xd
+	.uleb128 0x5							.uleb128 0x5
+	.byte	0x4							.byte	0x4
+	.long	.LCFI28-.LCFI24				      |		.long	.LCFI153-.LCFI152
+	.byte	0x84							.byte	0x84
+	.uleb128 0x6					      <
+	.byte	0x83					      <
+	.uleb128 0x5					      <
+	.byte	0x86					      <
+	.uleb128 0x4					      <
+	.byte	0x87					      <
+	.uleb128 0x3							.uleb128 0x3
+	.align 4							.align 4
+.LEFDE11:						      |	.LEFDE105:
+	.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"		.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"
+	.section	.note.GNU-stack,"",@progbits			.section	.note.GNU-stack,"",@progbits

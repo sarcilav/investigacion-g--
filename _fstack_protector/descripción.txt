@@ -1,3 +1,14 @@
 Optimización de seguridad. Evita las funciones de un programa que
 puedan explotarse mediante buffer overflows.
 
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.004s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+
+El código disminuye de 48 kb a casi 12 kb

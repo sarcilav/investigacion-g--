@@ -3,3 +3,13 @@ flotante o una carga de memoria para tenerla lista en el momento preciso.
 lo que elimina el tiempo de espera mientras esta se carga.
 muy útil en máquinas con tiempos de carga y operación de punto flotante lento.
 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+sin
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+

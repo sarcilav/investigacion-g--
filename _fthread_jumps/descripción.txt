@@ -1,2 +1,14 @@
 Revisa si en bloque de código se puede extender hasta una un punto donde se incluya una condición y dependiendo de si el valor de esta condición se puede
 determinar con anterioridad, el salto se redirecciona.
+
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+
+La optimización nos interesa en cuanto a que disminuye el tamaño del código considerablemente.
