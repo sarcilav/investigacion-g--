@@ -1,0 +1,104 @@
+11c11
+< 	pushl	%edi
+---
+> 	subl	$32, %esp
+13,19c13,15
+< 	pushl	%esi
+< .LCFI3:
+< 	pushl	%ebx
+< .LCFI4:
+< 	movl	$1, %esi
+< 	movl	$0, %eax
+< 	movl	$0, %edi
+---
+> 	movl	$100000, -20(%ebp)
+> 	movl	$0, -16(%ebp)
+> 	movb	$1, -9(%ebp)
+21c17,25
+< 	movl	$0, %ecx
+---
+> 	movl	$0, -8(%ebp)
+> 	jmp	.L3
+> .L6:
+> 	movl	-8(%ebp), %eax
+> 	addl	%eax, -16(%ebp)
+> 	movl	-8(%ebp), %eax
+> 	addl	$1, %eax
+> 	movl	%eax, -4(%ebp)
+> 	jmp	.L4
+23,27c27,31
+< 	addl	%ecx, %eax
+< 	leal	1(%ecx), %ebx
+< 	cmpl	$100000, %ebx
+< 	je	.L3
+< 	movl	%ebx, %edx
+---
+> 	movl	-8(%ebp), %eax
+> 	subl	%eax, -16(%ebp)
+> 	movl	-4(%ebp), %eax
+> 	addl	%eax, -16(%ebp)
+> 	addl	$1, -4(%ebp)
+29,41c33,35
+< 	leal	(%edx,%eax), %eax
+< 	subl	%ecx, %eax
+< 	addl	$1, %edx
+< 	cmpl	$99999, %edx
+< 	jle	.L4
+< 	movl	%ebx, %ecx
+< 	jmp	.L5
+< .L6:
+< 	popl	%ebx
+< 	popl	%esi
+< 	popl	%edi
+< 	popl	%ebp
+< 	ret
+---
+> 	cmpl	$99999, -4(%ebp)
+> 	jle	.L5
+> 	addl	$1, -8(%ebp)
+43,50c37,41
+< 	movl	%esi, %edx
+< 	testb	%dl, %dl
+< 	.p2align 4,,2
+< 	.p2align 3
+< 	je	.L6
+< 	movl	%edi, %esi
+< 	.p2align 4,,2
+< 	.p2align 3
+---
+> 	cmpl	$99999, -8(%ebp)
+> 	jle	.L6
+> 	cmpb	$0, -9(%ebp)
+> 	je	.L7
+> 	movb	$0, -9(%ebp)
+51a43,46
+> .L7:
+> 	movl	-16(%ebp), %eax
+> 	leave
+> 	ret
+59c54
+< .LCFI5:
+---
+> .LCFI3:
+62c57
+< .LCFI6:
+---
+> .LCFI4:
+64c59
+< .LCFI7:
+---
+> .LCFI5:
+66c61
+< .LCFI8:
+---
+> .LCFI6:
+68c63,65
+< .LCFI9:
+---
+> .LCFI7:
+> 	subl	$16, %esp
+> .LCFI8:
+69a67
+> 	movl	%eax, -8(%ebp)
+70a69
+> 	addl	$16, %esp

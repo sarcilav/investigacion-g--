@@ -50,6 +50,20 @@
 
 	En algunos entornos, esta hipótesis no es cierto. Utilice -fno-delete-null-pointer-checks  para desactivar esta optimización de los programas que dependen de este comportamiento.
 
+-fexpensive-optimizations
+	Intenta realizar un numero minimo de optimizaciones
+
+-ffast-math -fno-math-errno
+	Realiza operaciones "ilegales" matematicamente hablando puesto que puede asumir falacias e ir encontra de la precision y reglas. Y nuestros compiladores no tienen activada esta opción
+
+
+-ffinite-math-only
+	Permitir optimizaciones de aritmética de punto flotante  en donde se asumen que los argumentos y los resultados no son NaNs o +-Infs.
+	Realiza operaciones "ilegales" matematicamente hablando puesto que puede asumir falacias e ir encontra de la precision y reglas
+
+-ffloat-store
+	Esta opción es obsoleta en la arquitectura de las máquinas usadas en la investigación
+
 
 
 NOTAS

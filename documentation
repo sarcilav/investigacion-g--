@@ -45,6 +45,24 @@
 -fdata-sections
 	Esta opción sirve para maquínas con procesadores Sparc y con sistemas operativos SUN_SOLARIS, maquínas con las que no contamos para la investigación
 
+-fdelete-null-pointer-checks
+	Utiliza un análisis de flujo de datos global para identificar y eliminar controles inútiles para los punteros nulos. El compilador asume que un error de puntero nulo podría haber detenido el programa. Si un puntero se comprueba después de que ya se ha descartado, no puede ser nulo.
+
+	En algunos entornos, esta hipótesis no es cierto. Utilice -fno-delete-null-pointer-checks  para desactivar esta optimización de los programas que dependen de este comportamiento.
+
+-fexpensive-optimizations
+	Intenta realizar un numero minimo de optimizaciones
+
+-ffast-math -fno-math-errno
+	Realiza operaciones "ilegales" matematicamente hablando puesto que puede asumir falacias e ir encontra de la precision y reglas. Y nuestros compiladores no tienen activada esta opción
+
+
+-ffinite-math-only
+	Permitir optimizaciones de aritmética de punto flotante  en donde se asumen que los argumentos y los resultados no son NaNs o +-Infs.
+	Realiza operaciones "ilegales" matematicamente hablando puesto que puede asumir falacias e ir encontra de la precision y reglas
+
+-ffloat-store
+	Esta opción es obsoleta en la arquitectura de las máquinas usadas en la investigación
 
 NOTAS
 1- Esta optimizacion sirve realmente para maquinas multi-core y la verdad no hace parte de la investigación el analisis de las diferentes arquitecturas y su impacto en el desarrollo de programas
