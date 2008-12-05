@@ -1,0 +1,1 @@
+example.cc:1: warning: -fprefetch-loop-arrays not supported for this target (try -march switches)

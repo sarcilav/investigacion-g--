@@ -84,6 +84,25 @@
 -fkeep-static-consts
 	Tiene un manejo especial para las variables static const
 
+-fmerge-constants
+-fmerge-all-constants
+	Esta opción el compilador siempre la tiene por defecto, y consiste en ahorrar variables constantes
+
+
+-fmove-loop-invariants
+	Saca las invariantes de los loops
+
+-fomit-frame-pointer
+	Imposible de poner a funcionar en las máquinas que realizamos la investigación
+
+-foptimize-register-move 
+	Lo mismo que -fregmove
+
+-fprefetch-loop-arrays
+	Intenta pre leer los ciclos y almacenar en memoria.
+	Imposible de poner a funcionar en las máquinas que realizamos la investigación la opción no esta soporta para estas.
+
+
 NOTAS
 1- Esta optimizacion sirve realmente para maquinas multi-core y la verdad no hace parte de la investigación el analisis de las diferentes arquitecturas y su impacto en el desarrollo de programas
 2- No sirve de nada sola
