@@ -1,0 +1,58 @@
+-falign-functions
+-falign-functions=n
+	Alinear el inicio de funciones, a la siguiente potencia de dos mayor que n, saltar hasta el n-esimo byte. Por ejemplo,-falign-functions = 32  alinea el próximo 32-byte frontera, pero -falign-functions = 24 solo puede alinear a la próxima 32-byte frontera sólo si esto se puede hacer saltando por 23 bytes o menos.
+
+-falign-jumps
+-falign-jumps=n
+	Alinear los branch especificos a una potencia de dos límites, para aquellos brach que solo se puedan lograr mediante "saltos", saltando hasta el n-octeto como -falign-funtions. En este caso, no se necesitan operaciones ficticias al ser ejecutado.
+
+-falign-labels
+-falign-labels=n
+	Es como -falign-jumps, solo que se insertan operaciones ficticias o basura para llevar a cabo este proceso.
+
+-falign-loops
+-falign-loops=n
+	Es como -falign-functions, pero para los ciclos, en donde se encarga de "limpiar y manejar" las operaciones basura o creadas por el compilador
+
+-fbranch-probabilities
+	La idea es optimizar el numero de veces que se hace o se ejecuta un branch
+
+-fbranch-target-load-optimize
+	Ver nota 1
+
+-fbranch-target-load-optimize2
+	Ver nota 1
+
+-fbtr-bb-exclusive
+	Solo sirve con optimizaciones que manipulen los branch, ver nota 2
+
+-fcaller-saves
+	Ver nota 3
+
+-fcprop-registers
+	Después de la asignación de registros y la distribución de las instrucciones en los registros, realizamos una copia de propagación para tratar las dependencias entre registros y, en ocasiones, eliminar la copia.
+
+-fcrossjumping
+	Esta transformación unifica código equivalente y ahorra tamaño en el código. El código resultante puede o no puede que dar mejor que sin usar esta optimización.
+
+-fcse-follow-jumps
+-fcse-skip-blocks
+	No encontramos como funciona la eliminacion de las subexpresiones lugares, creemos que ahorra tamaño de código.
+
+-fcx-limited-range
+	Esta opción "mejora" el código, lo "embellese", controlando el numero de pragma o opciones de compilardor que un codigo maneja, no realiza una verdadera optimización sobre los dos enfoques de esta investigación eficiencia y espacio. Ver nota 1
+
+-fdata-sections
+	Esta opción sirve para maquínas con procesadores Sparc y con sistemas operativos SUN_SOLARIS, maquínas con las que no contamos para la investigación
+
+-fdelete-null-pointer-checks
+	Utiliza un análisis de flujo de datos global para identificar y eliminar controles inútiles para los punteros nulos. El compilador asume que un error de puntero nulo podría haber detenido el programa. Si un puntero se comprueba después de que ya se ha descartado, no puede ser nulo.
+
+	En algunos entornos, esta hipótesis no es cierto. Utilice -fno-delete-null-pointer-checks  para desactivar esta optimización de los programas que dependen de este comportamiento.
+
+
+
+NOTAS
+1- Esta optimizacion sirve realmente para maquinas multi-core y la verdad no hace parte de la investigación el analisis de las diferentes arquitecturas y su impacto en el desarrollo de programas
+2- No sirve de nada sola
+3- Esta optimización siempre esta por defecto en las maquínas utilizadas en la investigación

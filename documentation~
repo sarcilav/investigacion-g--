@@ -1,0 +1,8 @@
+-falign-functions
+-falign-functions=n
+	Alinear el inicio de funciones, a la siguiente potencia de dos mayor que n, saltar hasta el n-esimo byte. Por ejemplo,-falign-functions = 32  alinea el próximo 32-byte frontera, pero -falign-functions = 24 solo puede alinear a la próxima 32-byte frontera sólo si esto se puede hacer saltando por 23 bytes o menos.
+
+-falign-jumps
+-falign-jumps=n
+   Alinear los branch especificos a una potencia de dos límites, para aquellos brach que solo se puedan lograr mediante "saltos", saltando hasta el n-octeto como -falign-funtions. En este caso, no se necesitan operaciones ficticias al ser ejecutado.
+		

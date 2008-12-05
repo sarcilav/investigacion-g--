@@ -1,0 +1,17 @@
+int suma(int *a,int *b)
+{
+  return ((*a)+(*b));
+}
+int multiplicacion(int a,int b)
+{
+  int res=0;
+  for(int i=0;i<(b);++i)
+    res+=suma(&res,&a);
+}
+#include<stdio.h>
+int main()
+{
+  int H=multiplicacion(123456,9872);
+  printf("ans = %d",H);
+  return 0;
+}
