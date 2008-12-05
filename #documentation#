@@ -69,6 +69,26 @@
 -fif-conversion2
 	Trata de realizar mejoras basandose en propiedades matemáticas del código
 
+-finline-functions
+	Integra las funciones inline dentro de los que llaman a esa funcion
+
+-finline-functions-called-once
+	Vuelve las funciones static inline y quita la funcion del código final
+
+-finline-limit=n
+	Por defecto el compilador limita el tamaño de las funciones inline, con esta opción se sobreescribre el tamaño deseado para las funciones inline
+
+-fkeep-inline-functions
+	Evita que el compilador vuelva las funciones static en inline
+
+-fkeep-static-consts
+	Tiene un manejo especial para las variables static const
+
+-fmerge-constants
+-fmerge-all-constants
+	Esta opción el compilador siempre la tiene por defecto
+
+
 
 
 NOTAS

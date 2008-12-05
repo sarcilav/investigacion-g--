@@ -42,6 +42,7 @@
 -fcx-limited-range
 	Esta opción "mejora" el código, lo "embellese", controlando el numero de pragma o opciones de compilardor que un codigo maneja, no realiza una verdadera optimización sobre los dos enfoques de esta investigación eficiencia y espacio. Ver nota 1
 
+-ffunction-sections
 -fdata-sections
 	Esta opción sirve para maquínas con procesadores Sparc y con sistemas operativos SUN_SOLARIS, maquínas con las que no contamos para la investigación
 
@@ -63,6 +64,25 @@
 
 -ffloat-store
 	Esta opción es obsoleta en la arquitectura de las máquinas usadas en la investigación
+
+-fif-conversion
+-fif-conversion2
+	Trata de realizar mejoras basandose en propiedades matemáticas del código
+
+-finline-functions
+	Integra las funciones inline dentro de los que llaman a esa funcion
+
+-finline-functions-called-once
+	Vuelve las funciones static inline y quita la funcion del código final
+
+-finline-limit=n
+	Por defecto el compilador limita el tamaño de las funciones inline, con esta opción se sobreescribre el tamaño deseado para las funciones inline
+
+-fkeep-inline-functions
+	Evita que el compilador vuelva las funciones static en inline
+
+-fkeep-static-consts
+	Tiene un manejo especial para las variables static const
 
 NOTAS
 1- Esta optimizacion sirve realmente para maquinas multi-core y la verdad no hace parte de la investigación el analisis de las diferentes arquitecturas y su impacto en el desarrollo de programas

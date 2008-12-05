@@ -1,0 +1,116 @@
+2,20d1
+< 	.section	.text._Z2hiRii,"axG",@progbits,_Z2hiRii,comdat
+< 	.weak	_Z2hiRii
+< 	.type	_Z2hiRii, @function
+< _Z2hiRii:
+< .LFB2:
+< 	pushl	%ebp
+< .LCFI0:
+< 	movl	%esp, %ebp
+< .LCFI1:
+< 	movl	8(%ebp), %eax
+< 	movl	(%eax), %eax
+< 	movl	%eax, %edx
+< 	addl	12(%ebp), %edx
+< 	movl	8(%ebp), %eax
+< 	movl	%edx, (%eax)
+< 	popl	%ebp
+< 	ret
+< .LFE2:
+< 	.size	_Z2hiRii, .-_Z2hiRii
+27c8
+< .LCFI2:
+---
+> .LCFI0:
+30c11
+< .LCFI3:
+---
+> .LCFI1:
+32c13
+< .LCFI4:
+---
+> .LCFI2:
+34c15
+< .LCFI5:
+---
+> .LCFI3:
+36,72c17,53
+< .LCFI6:
+< 	subl	$36, %esp
+< .LCFI7:
+< 	movl	$100, -12(%ebp)
+< 	movl	$10, -16(%ebp)
+< 	movl	$1, -20(%ebp)
+< 	movl	$12, -8(%ebp)
+< 	movl	-16(%ebp), %eax
+< 	movl	%eax, 4(%esp)
+< 	leal	-12(%ebp), %eax
+< 	movl	%eax, (%esp)
+< 	call	_Z2hiRii
+< 	movl	-20(%ebp), %eax
+< 	movl	%eax, 4(%esp)
+< 	leal	-12(%ebp), %eax
+< 	movl	%eax, (%esp)
+< 	call	_Z2hiRii
+< 	movl	-8(%ebp), %eax
+< 	movl	%eax, 4(%esp)
+< 	leal	-12(%ebp), %eax
+< 	movl	%eax, (%esp)
+< 	call	_Z2hiRii
+< 	movl	-20(%ebp), %eax
+< 	movl	%eax, 4(%esp)
+< 	leal	-16(%ebp), %eax
+< 	movl	%eax, (%esp)
+< 	call	_Z2hiRii
+< 	movl	-8(%ebp), %eax
+< 	movl	%eax, 4(%esp)
+< 	leal	-16(%ebp), %eax
+< 	movl	%eax, (%esp)
+< 	call	_Z2hiRii
+< 	movl	-8(%ebp), %eax
+< 	movl	%eax, 4(%esp)
+< 	leal	-20(%ebp), %eax
+< 	movl	%eax, (%esp)
+< 	call	_Z2hiRii
+---
+> .LCFI4:
+> 	subl	$48, %esp
+> .LCFI5:
+> 	movl	$100, -36(%ebp)
+> 	movl	$10, -40(%ebp)
+> 	movl	$1, -44(%ebp)
+> 	movl	$12, -32(%ebp)
+> 	movl	-40(%ebp), %eax
+> 	movl	%eax, -28(%ebp)
+> 	movl	-36(%ebp), %eax
+> 	addl	-28(%ebp), %eax
+> 	movl	%eax, -36(%ebp)
+> 	movl	-44(%ebp), %eax
+> 	movl	%eax, -24(%ebp)
+> 	movl	-36(%ebp), %eax
+> 	addl	-24(%ebp), %eax
+> 	movl	%eax, -36(%ebp)
+> 	movl	-32(%ebp), %eax
+> 	movl	%eax, -20(%ebp)
+> 	movl	-36(%ebp), %eax
+> 	addl	-20(%ebp), %eax
+> 	movl	%eax, -36(%ebp)
+> 	movl	-44(%ebp), %eax
+> 	movl	%eax, -16(%ebp)
+> 	movl	-40(%ebp), %eax
+> 	addl	-16(%ebp), %eax
+> 	movl	%eax, -40(%ebp)
+> 	movl	-32(%ebp), %eax
+> 	movl	%eax, -12(%ebp)
+> 	movl	-40(%ebp), %eax
+> 	addl	-12(%ebp), %eax
+> 	movl	%eax, -40(%ebp)
+> 	movl	-32(%ebp), %eax
+> 	movl	%eax, -8(%ebp)
+> 	movl	-44(%ebp), %eax
+> 	addl	-8(%ebp), %eax
+> 	movl	%eax, -44(%ebp)
+74c55
+< 	addl	$36, %esp
+---
+> 	addl	$48, %esp

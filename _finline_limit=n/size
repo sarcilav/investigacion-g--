@@ -1,0 +1,8 @@
+total 32
+-rwxr-xr-x 1 sebastian sebastian 6380 dic  4 20:49 conOptimizacion
+-rw-r--r-- 1 sebastian sebastian 1158 dic  4 20:49 conOptimizacion.asm
+-rw-r--r-- 1 sebastian sebastian 2177 dic  4 20:49 diff
+-rw-r--r-- 1 sebastian sebastian  165 dic  4 20:46 example.cc
+-rwxr-xr-x 1 sebastian sebastian 6437 dic  4 20:47 sinOptimizacion
+-rw-r--r-- 1 sebastian sebastian 1413 dic  4 20:47 sinOptimizacion.asm
+-rw-r--r-- 1 sebastian sebastian    0 dic  4 20:49 size
