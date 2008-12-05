@@ -1,4 +1,4 @@
-	.file	"sample3.cc"
+	.file	"sample3.cpp"
 	.text
 	.align 2
 .globl _Z1ai

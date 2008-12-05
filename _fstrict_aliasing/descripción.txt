@@ -1,5 +1,5 @@
-Permite de alguna forma que los tipos de datos similares compartan direcciones de
-memoria.
+Permite que los tipos de datos similares compartan direcciones de
+memoria, por ejemplo un unsigned int y un int.
 
 Eso se daría en tipos de datos 'contenedores', por ejemplo un int en un double.
 en 'sample' trato de sacar el int del double.

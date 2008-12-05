@@ -6,6 +6,16 @@ Desenrolla los loops cuya cantidad de iteraciones se conozca en tiempo
 de compilación. Agranda el tamaño del ejecutable y es posible que en realidad no haga correr
 más rápido a un programa.
 
-Nota:Investigar bien como afectan a esta opción las opciones param max-unroll-times y param max-unrolled-
-insns
+con
+real	0m0.001s
+user	0m0.004s
+sys	0m0.000s
+
+sin
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+
+
 

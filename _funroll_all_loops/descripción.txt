@@ -15,4 +15,5 @@ user	0m0.008s
 sys	0m0.000s
 
 
-pero en cuanto al código sí hay cambios
+pero en cuanto al código sí hay cambios, se crea todo un nuevo label que tiene
+la labor de realizar varias veces lo que hay en el ciclo.

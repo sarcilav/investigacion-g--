@@ -1,168 +1,120 @@
-	.file	"sample3.cc"						.file	"sample3.cc"
-	.text								.text
-	.align 2							.align 2
-.globl _Z1ai							.globl _Z1ai
-	.type	_Z1ai, @function					.type	_Z1ai, @function
-_Z1ai:								_Z1ai:
-.LFB2:								.LFB2:
-	pushl	%ebp							pushl	%ebp
-.LCFI0:								.LCFI0:
-	movl	%esp, %ebp						movl	%esp, %ebp
-.LCFI1:								.LCFI1:
-	movl	8(%ebp), %eax						movl	8(%ebp), %eax
-	popl	%ebp							popl	%ebp
-	ret								ret
-.LFE2:								.LFE2:
-	.size	_Z1ai, .-_Z1ai						.size	_Z1ai, .-_Z1ai
-.globl __gxx_personality_v0					.globl __gxx_personality_v0
-	.align 2							.align 2
-.globl _Z1bi							.globl _Z1bi
-	.type	_Z1bi, @function					.type	_Z1bi, @function
-_Z1bi:								_Z1bi:
-.LFB3:								.LFB3:
-	pushl	%ebp							pushl	%ebp
-.LCFI2:								.LCFI2:
-	movl	%esp, %ebp						movl	%esp, %ebp
-.LCFI3:								.LCFI3:
-	movl	8(%ebp), %eax						movl	8(%ebp), %eax
-	imull	%eax, %eax						imull	%eax, %eax
-	popl	%ebp							popl	%ebp
-	ret								ret
-.LFE3:								.LFE3:
-	.size	_Z1bi, .-_Z1bi						.size	_Z1bi, .-_Z1bi
-	.align 2							.align 2
-.globl _Z1ci							.globl _Z1ci
-	.type	_Z1ci, @function					.type	_Z1ci, @function
-_Z1ci:								_Z1ci:
-.LFB4:								.LFB4:
-	pushl	%ebp							pushl	%ebp
-.LCFI4:								.LCFI4:
-	movl	%esp, %ebp						movl	%esp, %ebp
-.LCFI5:								.LCFI5:
-	movl	8(%ebp), %ecx						movl	8(%ebp), %ecx
-	movl	$1431655766, %edx					movl	$1431655766, %edx
-	movl	%ecx, %eax						movl	%ecx, %eax
-	imull	%edx							imull	%edx
-	movl	%ecx, %eax						movl	%ecx, %eax
-	sarl	$31, %eax						sarl	$31, %eax
-	subl	%eax, %edx						subl	%eax, %edx
-	movl	%edx, %eax						movl	%edx, %eax
-	popl	%ebp							popl	%ebp
-	ret								ret
-.LFE4:								.LFE4:
-	.size	_Z1ci, .-_Z1ci						.size	_Z1ci, .-_Z1ci
-	.section	.rodata.str1.1,"aMS",@progbits,1		.section	.rodata.str1.1,"aMS",@progbits,1
-.LC0:								.LC0:
-	.string	"%d"							.string	"%d"
-	.text								.text
-	.align 2							.align 2
-.globl main							.globl main
-	.type	main, @function						.type	main, @function
-main:								main:
-.LFB5:								.LFB5:
-	leal	4(%esp), %ecx						leal	4(%esp), %ecx
-.LCFI6:								.LCFI6:
-	andl	$-16, %esp						andl	$-16, %esp
-	pushl	-4(%ecx)						pushl	-4(%ecx)
-.LCFI7:								.LCFI7:
-	pushl	%ebp							pushl	%ebp
-.LCFI8:								.LCFI8:
-	movl	%esp, %ebp						movl	%esp, %ebp
-.LCFI9:								.LCFI9:
-	pushl	%esi							pushl	%esi
-.LCFI10:							.LCFI10:
-	pushl	%ebx							pushl	%ebx
-.LCFI11:							.LCFI11:
-	pushl	%ecx							pushl	%ecx
-.LCFI12:							.LCFI12:
-	subl	$12, %esp						subl	$12, %esp
-.LCFI13:							.LCFI13:
-	movl	$0, %esi						movl	$0, %esi
-.L8:								.L8:
-	movl	%esi, (%esp)						movl	%esi, (%esp)
-	call	_Z1bi							call	_Z1bi
-	movl	%eax, %ebx						movl	%eax, %ebx
-	movl	%esi, (%esp)						movl	%esi, (%esp)
-	call	_Z1ai							call	_Z1ai
-	addl	%eax, %ebx						addl	%eax, %ebx
-	movl	%esi, (%esp)						movl	%esi, (%esp)
-	call	_Z1ci							call	_Z1ci
-	leal	(%ebx,%eax), %eax					leal	(%ebx,%eax), %eax
-	movl	%eax, 4(%esp)						movl	%eax, 4(%esp)
-	movl	$.LC0, (%esp)						movl	$.LC0, (%esp)
-	call	printf							call	printf
-	addl	$1, %esi						addl	$1, %esi
-	cmpl	$10000, %esi						cmpl	$10000, %esi
-	jne	.L8							jne	.L8
-	movl	$0, %eax						movl	$0, %eax
-	addl	$12, %esp						addl	$12, %esp
-	popl	%ecx							popl	%ecx
-	popl	%ebx							popl	%ebx
-	popl	%esi							popl	%esi
-	popl	%ebp							popl	%ebp
-	leal	-4(%ecx), %esp						leal	-4(%ecx), %esp
-	ret								ret
-.LFE5:								.LFE5:
-	.size	main, .-main						.size	main, .-main
-	.section	.eh_frame,"a",@progbits				.section	.eh_frame,"a",@progbits
-.Lframe1:							.Lframe1:
-	.long	.LECIE1-.LSCIE1						.long	.LECIE1-.LSCIE1
-.LSCIE1:							.LSCIE1:
-	.long	0x0							.long	0x0
-	.byte	0x1							.byte	0x1
-	.string	"zP"							.string	"zP"
-	.uleb128 0x1							.uleb128 0x1
-	.sleb128 -4							.sleb128 -4
-	.byte	0x8							.byte	0x8
-	.uleb128 0x5							.uleb128 0x5
-	.byte	0x0							.byte	0x0
-	.long	__gxx_personality_v0					.long	__gxx_personality_v0
-	.byte	0xc							.byte	0xc
-	.uleb128 0x4							.uleb128 0x4
-	.uleb128 0x4							.uleb128 0x4
-	.byte	0x88							.byte	0x88
-	.uleb128 0x1							.uleb128 0x1
-	.align 4							.align 4
-.LECIE1:							.LECIE1:
-.LSFDE7:							.LSFDE7:
-	.long	.LEFDE7-.LASFDE7					.long	.LEFDE7-.LASFDE7
-.LASFDE7:							.LASFDE7:
-	.long	.LASFDE7-.Lframe1					.long	.LASFDE7-.Lframe1
-	.long	.LFB5							.long	.LFB5
-	.long	.LFE5-.LFB5						.long	.LFE5-.LFB5
-	.uleb128 0x0							.uleb128 0x0
-	.byte	0x4							.byte	0x4
-	.long	.LCFI6-.LFB5						.long	.LCFI6-.LFB5
-	.byte	0xc							.byte	0xc
-	.uleb128 0x1							.uleb128 0x1
-	.uleb128 0x0							.uleb128 0x0
-	.byte	0x9							.byte	0x9
-	.uleb128 0x4							.uleb128 0x4
-	.uleb128 0x1							.uleb128 0x1
-	.byte	0x4							.byte	0x4
-	.long	.LCFI7-.LCFI6						.long	.LCFI7-.LCFI6
-	.byte	0xc							.byte	0xc
-	.uleb128 0x4							.uleb128 0x4
-	.uleb128 0x4							.uleb128 0x4
-	.byte	0x4							.byte	0x4
-	.long	.LCFI8-.LCFI7						.long	.LCFI8-.LCFI7
-	.byte	0xe							.byte	0xe
-	.uleb128 0x8							.uleb128 0x8
-	.byte	0x85							.byte	0x85
-	.uleb128 0x2							.uleb128 0x2
-	.byte	0x4							.byte	0x4
-	.long	.LCFI9-.LCFI8						.long	.LCFI9-.LCFI8
-	.byte	0xd							.byte	0xd
-	.uleb128 0x5							.uleb128 0x5
-	.byte	0x4							.byte	0x4
-	.long	.LCFI12-.LCFI9						.long	.LCFI12-.LCFI9
-	.byte	0x84							.byte	0x84
-	.uleb128 0x5							.uleb128 0x5
-	.byte	0x83							.byte	0x83
-	.uleb128 0x4							.uleb128 0x4
-	.byte	0x86							.byte	0x86
-	.uleb128 0x3							.uleb128 0x3
-	.align 4							.align 4
-.LEFDE7:							.LEFDE7:
-	.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"		.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"
-	.section	.note.GNU-stack,"",@progbits			.section	.note.GNU-stack,"",@progbits
+12a13
+> 	addl	$1, 8(%ebp)
+28c29,31
+< 	imull	%eax, %eax
+---
+> 	imull	8(%ebp), %eax
+> 	movl	%eax, 8(%ebp)
+> 	movl	8(%ebp), %eax
+42,46c45,53
+< 	movl	8(%ebp), %ecx
+< 	movl	$1431655766, %edx
+< 	movl	%ecx, %eax
+< 	imull	%edx
+< 	movl	%ecx, %eax
+---
+> 	subl	$8, %esp
+> .LCFI6:
+> 	movl	8(%ebp), %eax
+> 	movl	%eax, -4(%ebp)
+> 	movl	$1431655766, -8(%ebp)
+> 	movl	-8(%ebp), %eax
+> 	imull	-4(%ebp)
+> 	movl	%edx, %ecx
+> 	movl	-4(%ebp), %eax
+47a55
+> 	movl	%ecx, %edx
+50c58,60
+< 	popl	%ebp
+---
+> 	movl	%eax, 8(%ebp)
+> 	movl	8(%ebp), %eax
+> 	leave
+54c64
+< 	.section	.rodata.str1.1,"aMS",@progbits,1
+---
+> 	.section	.rodata
+64c74
+< .LCFI6:
+---
+> .LCFI7:
+67,68d76
+< .LCFI7:
+< 	pushl	%ebp
+70c78
+< 	movl	%esp, %ebp
+---
+> 	pushl	%ebp
+72c80
+< 	pushl	%esi
+---
+> 	movl	%esp, %ebp
+78c86
+< 	subl	$12, %esp
+---
+> 	subl	$32, %esp
+80,85c88,92
+< 	movl	$0, %esi
+< .L8:
+< 	movl	%esi, (%esp)
+< 	call	_Z1bi
+< 	movl	%eax, %ebx
+< 	movl	%esi, (%esp)
+---
+> 	movl	$0, -12(%ebp)
+> 	jmp	.L8
+> .L9:
+> 	movl	-12(%ebp), %eax
+> 	movl	%eax, (%esp)
+86a94,97
+> 	movl	%eax, %ebx
+> 	movl	-12(%ebp), %eax
+> 	movl	%eax, (%esp)
+> 	call	_Z1bi
+88c99,100
+< 	movl	%esi, (%esp)
+---
+> 	movl	-12(%ebp), %eax
+> 	movl	%eax, (%esp)
+94,96c106,109
+< 	addl	$1, %esi
+< 	cmpl	$10000, %esi
+< 	jne	.L8
+---
+> 	addl	$1, -12(%ebp)
+> .L8:
+> 	cmpl	$9999, -12(%ebp)
+> 	jle	.L9
+98c111
+< 	addl	$12, %esp
+---
+> 	addl	$32, %esp
+101d113
+< 	popl	%esi
+135c147
+< 	.long	.LCFI6-.LFB5
+---
+> 	.long	.LCFI7-.LFB5
+143c155
+< 	.long	.LCFI7-.LCFI6
+---
+> 	.long	.LCFI8-.LCFI7
+148c160
+< 	.long	.LCFI8-.LCFI7
+---
+> 	.long	.LCFI9-.LCFI8
+154c166
+< 	.long	.LCFI9-.LCFI8
+---
+> 	.long	.LCFI10-.LCFI9
+158c170
+< 	.long	.LCFI12-.LCFI9
+---
+> 	.long	.LCFI12-.LCFI10
+160,161d171
+< 	.uleb128 0x5
+< 	.byte	0x83
+163c173
+< 	.byte	0x86
+---
+> 	.byte	0x83

@@ -10,6 +10,7 @@ _Z1ai:								_Z1ai:
 	movl	%esp, %ebp						movl	%esp, %ebp
 .LCFI1:								.LCFI1:
 	movl	8(%ebp), %eax						movl	8(%ebp), %eax
+							      >		addl	$1, 8(%ebp)
 	popl	%ebp							popl	%ebp
 	ret								ret
 .LFE2:								.LFE2:
@@ -24,8 +25,9 @@ _Z1bi:								_Z1bi:
 .LCFI2:								.LCFI2:
 	movl	%esp, %ebp						movl	%esp, %ebp
 .LCFI3:								.LCFI3:
+							      >		sall	8(%ebp)
 	movl	8(%ebp), %eax						movl	8(%ebp), %eax
-	addl	%eax, %eax						addl	%eax, %eax
+	addl	%eax, %eax				      <
 	popl	%ebp							popl	%ebp
 	ret								ret
 .LFE3:								.LFE3:
@@ -45,11 +47,13 @@ _Z1ci:								_Z1ci:
 	shrl	$30, %eax						shrl	$30, %eax
 	addl	%edx, %eax						addl	%edx, %eax
 	sarl	$2, %eax						sarl	$2, %eax
+							      >		movl	%eax, 8(%ebp)
+							      >		movl	8(%ebp), %eax
 	popl	%ebp							popl	%ebp
 	ret								ret
 .LFE4:								.LFE4:
 	.size	_Z1ci, .-_Z1ci						.size	_Z1ci, .-_Z1ci
-	.section	.rodata.str1.1,"aMS",@progbits,1		.section	.rodata.str1.1,"aMS",@progbits,1
+	.section	.rodata.str1.1,"aMS",@progbits,1      |		.section	.rodata
 .LC0:								.LC0:
 	.string	"%d"							.string	"%d"
 	.text								.text
@@ -67,26 +71,36 @@ main:								main:
 .LCFI8:								.LCFI8:
 	movl	%esp, %ebp						movl	%esp, %ebp
 .LCFI9:								.LCFI9:
-	pushl	%ebx							pushl	%ebx
-.LCFI10:							.LCFI10:
+	pushl	%ebx					      <
+.LCFI10:						      <
 	pushl	%ecx							pushl	%ecx
+							      >	.LCFI10:
+							      >		subl	$36, %esp
 .LCFI11:							.LCFI11:
-	subl	$16, %esp						subl	$16, %esp
-.LCFI12:							.LCFI12:
-	movl	$0, %ebx						movl	$0, %ebx
-.L8:								.L8:
-	movl	%ebx, (%esp)						movl	%ebx, (%esp)
+	subl	$16, %esp				      |		movl	$10000, -8(%ebp)
+.LCFI12:						      |		movl	$0, -12(%ebp)
+	movl	$0, %ebx				      |		jmp	.L8
+.L8:							      |	.L9:
+	movl	%ebx, (%esp)				      |		movl	-12(%ebp), %eax
+							      >		addl	-12(%ebp), %eax
+							      >		movl	%eax, (%esp)
 	call	_Z1bi							call	_Z1bi
 	movl	%eax, 4(%esp)						movl	%eax, 4(%esp)
 	movl	$.LC0, (%esp)						movl	$.LC0, (%esp)
 	call	printf							call	printf
-	addl	$2, %ebx						addl	$2, %ebx
-	cmpl	$20000, %ebx						cmpl	$20000, %ebx
-	jne	.L8							jne	.L8
+	addl	$2, %ebx				      |		addl	$1, -12(%ebp)
+	cmpl	$20000, %ebx				      |	.L8:
+	jne	.L8					      |		movl	-12(%ebp), %eax
+							      >		cmpl	-8(%ebp), %eax
+							      >		jl	.L9
+							      >		movl	$12, (%esp)
+							      >		call	_Z1ci
+							      >		movl	$31, (%esp)
+							      >		call	_Z1ai
 	movl	$0, %eax						movl	$0, %eax
-	addl	$16, %esp						addl	$16, %esp
+	addl	$16, %esp				      |		addl	$36, %esp
 	popl	%ecx							popl	%ecx
-	popl	%ebx							popl	%ebx
+	popl	%ebx					      <
 	popl	%ebp							popl	%ebp
 	leal	-4(%ecx), %esp						leal	-4(%ecx), %esp
 	ret								ret
@@ -143,10 +157,10 @@ main:								main:
 	.byte	0xd							.byte	0xd
 	.uleb128 0x5							.uleb128 0x5
 	.byte	0x4							.byte	0x4
-	.long	.LCFI11-.LCFI9						.long	.LCFI11-.LCFI9
+	.long	.LCFI11-.LCFI9				      |		.long	.LCFI10-.LCFI9
 	.byte	0x84							.byte	0x84
-	.uleb128 0x4							.uleb128 0x4
-	.byte	0x83							.byte	0x83
+	.uleb128 0x4					      <
+	.byte	0x83					      <
 	.uleb128 0x3							.uleb128 0x3
 	.align 4							.align 4
 .LEFDE7:							.LEFDE7:

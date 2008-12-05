@@ -1,3 +1,14 @@
-Mueve las funciones de en el archivo de asembler o en los .o de forma tal que que
-se vuelva más eficiente el uso de la cache.
-es como indexar de forma ágil las funciones para que sea rápido recuperarlas.
+va guardando el valor de la última iteración y no toda la
+cadena que guarda, todos los estados, como cuando se guarda el estado de las 
+variables en el momento de hacer una recursión
+
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.004s
+

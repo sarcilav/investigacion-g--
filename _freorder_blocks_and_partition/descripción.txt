@@ -1,3 +1,16 @@
 Mueve las funciones de en el archivo de asembler o en los .o de forma tal que que
 se vuelva más eficiente el uso de la cache.
 es como indexar de forma ágil las funciones para que sea rápido recuperarlas.
+
+real	0m0.006s
+user	0m0.004s
+sys	0m0.004s
+
+real	0m0.007s
+user	0m0.008s
+sys	0m0.000s
+
+El código se reduce un poco con la optimización.
+El verdadero impacto no se puede determinar con certeza ya que la optimización
+saca una advertencia en la compilación, esto debe ser que se debe usar en conjunto
+con otra opción.

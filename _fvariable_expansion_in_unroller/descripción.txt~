@@ -1,0 +1,17 @@
+Para el momento en que se ejecuta un ciclo se crean varias copias de las variables locales, lo que resulta en mucho código.
+
+NS/NR Servirá para trazabilidad de las variables y sus cambio.
+
+
+En tiempos se muestra mucho cambio, con un ciclo de 10000 iteraciones los tiempos son
+real	0m0.210s
+user	0m0.004s
+sys	0m0.000s
+con la optimización y,
+real	0m0.186s
+user	0m0.004s
+sys	0m0.000s
+sin la optimización.
+lo que demuestra que esta optimización o bien no prevee el uso de las variables, o quizá se note en compilaciones más extensas.
+
+el tamaño del código no cambia, los dos códigos generados en asembler tienen aproximadamente el mismo número de líneas

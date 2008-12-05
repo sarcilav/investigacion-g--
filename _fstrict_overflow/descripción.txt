@@ -12,4 +12,4 @@ real	0m0.002s
 user	0m0.004s
 sys	0m0.000s
 
-Para sample32 se tienen los mismos tiempos
+Para sample32 se tienen los mismos tiempos y el mismo tamaño

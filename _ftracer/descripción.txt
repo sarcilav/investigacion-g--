@@ -1,4 +1,5 @@
-Esta opción al parecer genera un duplicado de código, el cual puede traer problemas cuando en el código se han definido 'labels' de asm, ya que estas solo pueden ser generadas una vez.
+Esta opción al parecer genera un duplicado de código, el cual puede traer problemas
+cuando en el código se han definido 'labels' de asm, ya que estas solo pueden ser generadas una vez.
 
 los tiempos son.
 con optimización
@@ -13,4 +14,4 @@ user	0m0.000s
 sys	0m0.000s
 
 
-ni el tamaño ni el código varían.
+El tiempo no varía, pero esta opción si tiene un impacto sobre el tamaño del código.

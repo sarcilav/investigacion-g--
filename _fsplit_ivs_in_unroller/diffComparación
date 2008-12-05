@@ -9,7 +9,12 @@ _Z4sumaii:							_Z4sumaii:
 .LCFI0:								.LCFI0:
 	movl	%esp, %ebp						movl	%esp, %ebp
 .LCFI1:								.LCFI1:
-	popl	%ebp							popl	%ebp
+	popl	%ebp					      |		subl	$16, %esp
+							      >	.LCFI2:
+							      >		movl	12(%ebp), %eax
+							      >		addl	8(%ebp), %eax
+							      >		movl	%eax, -4(%ebp)
+							      >		leave
 	ret								ret
 .LFE2:								.LFE2:
 	.size	_Z4sumaii, .-_Z4sumaii					.size	_Z4sumaii, .-_Z4sumaii
@@ -20,10 +25,17 @@ _Z4sumaii:							_Z4sumaii:
 _Z14multiplicacionii:						_Z14multiplicacionii:
 .LFB3:								.LFB3:
 	pushl	%ebp							pushl	%ebp
-.LCFI2:								.LCFI2:
-	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI2:							      <
+	movl	%esp, %ebp				      <
 .LCFI3:								.LCFI3:
-	popl	%ebp							popl	%ebp
+	popl	%ebp					      |		movl	%esp, %ebp
+							      >	.LCFI4:
+							      >		subl	$16, %esp
+							      >	.LCFI5:
+							      >		movl	8(%ebp), %eax
+							      >		imull	12(%ebp), %eax
+							      >		movl	%eax, -4(%ebp)
+							      >		leave
 	ret								ret
 .LFE3:								.LFE3:
 	.size	_Z14multiplicacionii, .-_Z14multiplicacionii		.size	_Z14multiplicacionii, .-_Z14multiplicacionii
@@ -33,23 +45,49 @@ _Z14multiplicacionii:						_Z14multiplicacionii:
 main:								main:
 .LFB4:								.LFB4:
 	leal	4(%esp), %ecx						leal	4(%esp), %ecx
-.LCFI4:								.LCFI4:
+.LCFI4:							      |	.LCFI6:
 	andl	$-16, %esp						andl	$-16, %esp
 	pushl	-4(%ecx)						pushl	-4(%ecx)
-.LCFI5:								.LCFI5:
+.LCFI5:							      |	.LCFI7:
 	pushl	%ebp							pushl	%ebp
-.LCFI6:								.LCFI6:
+.LCFI6:							      |	.LCFI8:
 	movl	%esp, %ebp						movl	%esp, %ebp
-.LCFI7:								.LCFI7:
+.LCFI7:							      |	.LCFI9:
 	pushl	%ecx							pushl	%ecx
-.LCFI8:								.LCFI8:
-	movl	$0, %eax						movl	$0, %eax
+.LCFI8:							      |	.LCFI10:
+	movl	$0, %eax				      |		subl	$40, %esp
+							      >	.LCFI11:
+							      >		movl	$100, -8(%ebp)
+							      >		movl	$4567, -12(%ebp)
+							      >		movl	$23456, -16(%ebp)
+							      >		movl	$3594, -20(%ebp)
+							      >		movl	$4357, -24(%ebp)
+							      >		movl	$0, -28(%ebp)
+							      >		movl	$0, -32(%ebp)
+							      >		jmp	.L6
+							      >	.L7:
+							      >		movl	-12(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	-8(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_Z4sumaii
+							      >		movl	-24(%ebp), %eax
+							      >		movl	%eax, 4(%esp)
+							      >		movl	-20(%ebp), %eax
+							      >		movl	%eax, (%esp)
+							      >		call	_Z14multiplicacionii
+							      >		movl	-28(%ebp), %eax
+							      >		movl	%eax, -16(%ebp)
+							      >		movl	-32(%ebp), %edx
+							      >		movl	-32(%ebp), %eax
+							      >		movl	%eax, arreglo(,%edx,4)
+							      >		addl	$1, -32(%ebp)
 .L6:								.L6:
-	movl	%eax, arreglo(,%eax,4)					movl	%eax, arreglo(,%eax,4)
-	addl	$1, %eax						addl	$1, %eax
-	cmpl	$10000, %eax						cmpl	$10000, %eax
-	jne	.L6							jne	.L6
-	movw	$0, %ax							movw	$0, %ax
+	movl	%eax, arreglo(,%eax,4)			      |		cmpl	$9999, -32(%ebp)
+	addl	$1, %eax				      |		jle	.L7
+	cmpl	$10000, %eax				      |		movl	$0, %eax
+	jne	.L6					      |		addl	$40, %esp
+	movw	$0, %ax					      <
 	popl	%ecx							popl	%ecx
 	popl	%ebp							popl	%ebp
 	leal	-4(%ecx), %esp						leal	-4(%ecx), %esp

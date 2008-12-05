@@ -3,5 +3,17 @@ es útil para máquinas que usan instrucciones de dos operandos.
 
 -foptimize-register-move tiene la misma función
 
-lo ensayé con código lleno de funciones, con recursión, con dfs y recursión, con 
-ciclos gigantes, y con un codigo que no cambiaba dentro un ciclo.
+Esta optimización cambia el tamaño del códgio de forma considerable.
+con la optimización el código tiene 702 líneas, mientras que sin la optimización
+alcanza las 2113 líneas.
+Lo que hace es hacer más uso de los registros.
+En tiempo no varía. Con
+real	0m0.002s
+user	0m0.000s
+sys	0m0.004s
+
+sin
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+

@@ -1,4 +1,4 @@
-	.file	"sample3.cc"
+	.file	"sample3.cpp"
 	.text
 	.align 2
 .globl _Z1ai
@@ -10,6 +10,7 @@ _Z1ai:
 	movl	%esp, %ebp
 .LCFI1:
 	movl	8(%ebp), %eax
+	addl	$1, 8(%ebp)
 	popl	%ebp
 	ret
 .LFE2:
@@ -25,7 +26,9 @@ _Z1bi:
 	movl	%esp, %ebp
 .LCFI3:
 	movl	8(%ebp), %eax
-	imull	%eax, %eax
+	imull	8(%ebp), %eax
+	movl	%eax, 8(%ebp)
+	movl	8(%ebp), %eax
 	popl	%ebp
 	ret
 .LFE3:
@@ -39,19 +42,26 @@ _Z1ci:
 .LCFI4:
 	movl	%esp, %ebp
 .LCFI5:
-	movl	8(%ebp), %ecx
-	movl	$1431655766, %edx
-	movl	%ecx, %eax
-	imull	%edx
-	movl	%ecx, %eax
+	subl	$8, %esp
+.LCFI6:
+	movl	8(%ebp), %eax
+	movl	%eax, -4(%ebp)
+	movl	$1431655766, -8(%ebp)
+	movl	-8(%ebp), %eax
+	imull	-4(%ebp)
+	movl	%edx, %ecx
+	movl	-4(%ebp), %eax
 	sarl	$31, %eax
+	movl	%ecx, %edx
 	subl	%eax, %edx
 	movl	%edx, %eax
-	popl	%ebp
+	movl	%eax, 8(%ebp)
+	movl	8(%ebp), %eax
+	leave
 	ret
 .LFE4:
 	.size	_Z1ci, .-_Z1ci
-	.section	.rodata.str1.1,"aMS",@progbits,1
+	.section	.rodata
 .LC0:
 	.string	"%d"
 	.text
@@ -61,44 +71,53 @@ _Z1ci:
 main:
 .LFB5:
 	leal	4(%esp), %ecx
-.LCFI6:
+.LCFI7:
 	andl	$-16, %esp
 	pushl	-4(%ecx)
-.LCFI7:
-	pushl	%ebp
 .LCFI8:
-	movl	%esp, %ebp
+	pushl	%ebp
 .LCFI9:
-	pushl	%esi
+	movl	%esp, %ebp
 .LCFI10:
 	pushl	%ebx
 .LCFI11:
 	pushl	%ecx
 .LCFI12:
-	subl	$12, %esp
+	subl	$32, %esp
 .LCFI13:
-	movl	$0, %esi
-.L8:
-	movl	%esi, (%esp)
-	call	_Z1bi
-	movl	%eax, %ebx
-	movl	%esi, (%esp)
+	movl	$0, -20(%ebp)
+	jmp	.L8
+.L9:
+	movl	-20(%ebp), %eax
+	movl	%eax, (%esp)
 	call	_Z1ai
+	movl	%eax, %ebx
+	movl	-20(%ebp), %eax
+	movl	%eax, (%esp)
+	call	_Z1bi
 	addl	%eax, %ebx
-	movl	%esi, (%esp)
+	movl	-20(%ebp), %eax
+	movl	%eax, (%esp)
 	call	_Z1ci
 	leal	(%ebx,%eax), %eax
 	movl	%eax, 4(%esp)
 	movl	$.LC0, (%esp)
 	call	printf
-	addl	$1, %esi
-	cmpl	$10000, %esi
-	jne	.L8
+	movl	-16(%ebp), %eax
+	addl	%eax, -12(%ebp)
+	movl	-12(%ebp), %eax
+	addl	-20(%ebp), %eax
+	addl	%eax, -16(%ebp)
+	addl	$1, -20(%ebp)
+	addl	$1, -12(%ebp)
+	addl	$1, -16(%ebp)
+.L8:
+	cmpl	$9999, -20(%ebp)
+	jle	.L9
 	movl	$0, %eax
-	addl	$12, %esp
+	addl	$32, %esp
 	popl	%ecx
 	popl	%ebx
-	popl	%esi
 	popl	%ebp
 	leal	-4(%ecx), %esp
 	ret
@@ -132,7 +151,7 @@ main:
 	.long	.LFE5-.LFB5
 	.uleb128 0x0
 	.byte	0x4
-	.long	.LCFI6-.LFB5
+	.long	.LCFI7-.LFB5
 	.byte	0xc
 	.uleb128 0x1
 	.uleb128 0x0
@@ -140,27 +159,25 @@ main:
 	.uleb128 0x4
 	.uleb128 0x1
 	.byte	0x4
-	.long	.LCFI7-.LCFI6
+	.long	.LCFI8-.LCFI7
 	.byte	0xc
 	.uleb128 0x4
 	.uleb128 0x4
 	.byte	0x4
-	.long	.LCFI8-.LCFI7
+	.long	.LCFI9-.LCFI8
 	.byte	0xe
 	.uleb128 0x8
 	.byte	0x85
 	.uleb128 0x2
 	.byte	0x4
-	.long	.LCFI9-.LCFI8
+	.long	.LCFI10-.LCFI9
 	.byte	0xd
 	.uleb128 0x5
 	.byte	0x4
-	.long	.LCFI12-.LCFI9
+	.long	.LCFI12-.LCFI10
 	.byte	0x84
-	.uleb128 0x5
-	.byte	0x83
 	.uleb128 0x4
-	.byte	0x86
+	.byte	0x83
 	.uleb128 0x3
 	.align 4
 .LEFDE7:

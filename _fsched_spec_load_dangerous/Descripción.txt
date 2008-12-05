@@ -1,0 +1,2 @@
+Realiza la misma actividad que '-fsched-spec-load', pero se aplica a un mayor
+número de instrucciones.

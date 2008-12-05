@@ -1,5 +1,5 @@
 	.file	"sample3.cpp"
-	.section	.rodata.str1.1,"aMS",@progbits,1
+	.section	.rodata
 .LC1:
 	.string	"%d"
 	.text
@@ -19,13 +19,16 @@ main:
 .LCFI3:
 	pushl	%ecx
 .LCFI4:
-	subl	$20, %esp
+	subl	$36, %esp
 .LCFI5:
-	movl	$-1065151889, 4(%esp)
+	fldl	.LC0
+	fstpl	-12(%ebp)
+	movl	-12(%ebp), %eax
+	movl	%eax, 4(%esp)
 	movl	$.LC1, (%esp)
 	call	printf
 	movl	$0, %eax
-	addl	$20, %esp
+	addl	$36, %esp
 	popl	%ecx
 	popl	%ebp
 	leal	-4(%ecx), %esp
@@ -33,6 +36,11 @@ main:
 .LFE2:
 	.size	main, .-main
 .globl __gxx_personality_v0
+	.section	.rodata
+	.align 8
+.LC0:
+	.long	-1065151889
+	.long	1074340298
 	.section	.eh_frame,"a",@progbits
 .Lframe1:
 	.long	.LECIE1-.LSCIE1

@@ -1,5 +1,3 @@
-Esta opción se usa como un seguro, no permite que posteriores revisiones para hacer
-'schedule' modifiquen lo que ya se había hecho en los ciclos.
+Elimina las expresiones comunes que, después de realizar las optimizaciones de ciclos.
+(Pasa después de los ciclos revisando, y eliminando el código innecesario)
 
-Estos schedule que se necesitan en diferentes etapas requieren como en los
-profilers hacer, más compilaciones.

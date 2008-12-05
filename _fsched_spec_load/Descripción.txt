@@ -1,0 +1,2 @@
+Permite hasta cierto punto que las instrucciones de carga puedan cambiar de lugar,
+esto solo puede suceder antes de realizar la designación de registros.

@@ -2,3 +2,15 @@ Se ejecuta esta opción para mejorar el acceso a las funciones, estas se organiz
 en base al uso que puedan tener.
 Para esta opción se deben tener activadas opciones de perfiles de compilación.
 como -fprofile-arcs y demás.
+
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+El tamaño disminuye un poco.
+

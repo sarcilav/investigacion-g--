@@ -1,0 +1,56 @@
+12a13
+> 	addl	$1, 8(%ebp)
+26a28
+> 	sall	8(%ebp)
+28d29
+< 	addl	%eax, %eax
+47a49,50
+> 	movl	%eax, 8(%ebp)
+> 	movl	8(%ebp), %eax
+52c55
+< 	.section	.rodata.str1.1,"aMS",@progbits,1
+---
+> 	.section	.rodata
+70,71d72
+< 	pushl	%ebx
+< .LCFI10:
+72a74,75
+> .LCFI10:
+> 	subl	$36, %esp
+74,78c77,83
+< 	subl	$16, %esp
+< .LCFI12:
+< 	movl	$2, %ebx
+< .L8:
+< 	movl	%ebx, 4(%esp)
+---
+> 	movl	$10000, -8(%ebp)
+> 	movl	$0, -12(%ebp)
+> 	jmp	.L8
+> .L9:
+> 	movl	-12(%ebp), %eax
+> 	addl	$2, %eax
+> 	movl	%eax, 4(%esp)
+81,83c86,90
+< 	addl	$1, %ebx
+< 	cmpl	$10002, %ebx
+< 	jne	.L8
+---
+> 	addl	$1, -12(%ebp)
+> .L8:
+> 	movl	-12(%ebp), %eax
+> 	cmpl	-8(%ebp), %eax
+> 	jl	.L9
+85c92
+< 	addl	$16, %esp
+---
+> 	addl	$36, %esp
+87d93
+< 	popl	%ebx
+144c150
+< 	.long	.LCFI11-.LCFI9
+---
+> 	.long	.LCFI10-.LCFI9
+146,147d151
+< 	.uleb128 0x4
+< 	.byte	0x83

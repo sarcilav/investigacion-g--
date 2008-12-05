@@ -16,7 +16,28 @@ main:
 .LCFI3:
 	pushl	%ecx
 .LCFI4:
+	subl	$16, %esp
+.LCFI5:
+	movl	$0, -12(%ebp)
+	jmp	.L2
+.L3:
+	movl	-12(%ebp), %eax
+	movl	%eax, -16(%ebp)
+	jmp	.L4
+.L5:
+	movl	-16(%ebp), %eax
+	addl	-12(%ebp), %eax
+	movl	%eax, -8(%ebp)
+	addl	$1, -16(%ebp)
+.L4:
+	cmpl	$9999, -16(%ebp)
+	jle	.L5
+	addl	$1, -12(%ebp)
+.L2:
+	cmpl	$9999, -12(%ebp)
+	jle	.L3
 	movl	$0, %eax
+	addl	$16, %esp
 	popl	%ecx
 	popl	%ebp
 	leal	-4(%ecx), %esp

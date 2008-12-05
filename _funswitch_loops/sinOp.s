@@ -1,4 +1,4 @@
-	.file	"sample3.cc"
+	.file	"sample3.cpp"
 	.text
 	.align 2
 .globl main
@@ -16,7 +16,22 @@ main:
 .LCFI3:
 	pushl	%ecx
 .LCFI4:
+	subl	$16, %esp
+.LCFI5:
+	movl	$10000, -8(%ebp)
+	movl	$10, -16(%ebp)
+	movl	$0, -20(%ebp)
+	jmp	.L2
+.L3:
+	movl	-16(%ebp), %eax
+	movl	%eax, -12(%ebp)
+	addl	$1, -20(%ebp)
+.L2:
+	movl	-20(%ebp), %eax
+	cmpl	-8(%ebp), %eax
+	jl	.L3
 	movl	$0, %eax
+	addl	$16, %esp
 	popl	%ecx
 	popl	%ebp
 	leal	-4(%ecx), %esp

@@ -2,13 +2,15 @@ Esta opción al parecer genera un duplicado de código, el cual puede traer prob
 
 los tiempos son.
 con optimización
-real	0m0.003s
-user	0m0.004s
-sys	0m0.000s
-./optimizador: line 10: 10246 Segmentation fault      ./sinOp < entrada
 
+real	0m0.003s
+user	0m0.000s
+sys	0m0.004s
+
+y sin la optimización
 real	0m0.002s
 user	0m0.000s
 sys	0m0.000s
 
 
+ni el tamaño ni el código varían.

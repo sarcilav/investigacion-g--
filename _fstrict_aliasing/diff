@@ -1,93 +1,25 @@
-	.file	"sample3.cpp"						.file	"sample3.cpp"
-	.section	.rodata.str1.1,"aMS",@progbits,1		.section	.rodata.str1.1,"aMS",@progbits,1
-.LC1:								.LC1:
-	.string	"%d"							.string	"%d"
-	.text								.text
-	.align 2							.align 2
-.globl main							.globl main
-	.type	main, @function						.type	main, @function
-main:								main:
-.LFB2:								.LFB2:
-	leal	4(%esp), %ecx						leal	4(%esp), %ecx
-.LCFI0:								.LCFI0:
-	andl	$-16, %esp						andl	$-16, %esp
-	pushl	-4(%ecx)						pushl	-4(%ecx)
-.LCFI1:								.LCFI1:
-	pushl	%ebp							pushl	%ebp
-.LCFI2:								.LCFI2:
-	movl	%esp, %ebp						movl	%esp, %ebp
-.LCFI3:								.LCFI3:
-	pushl	%ecx							pushl	%ecx
-.LCFI4:								.LCFI4:
-	subl	$20, %esp						subl	$20, %esp
-.LCFI5:								.LCFI5:
-	movl	$-1065151889, 4(%esp)					movl	$-1065151889, 4(%esp)
-	movl	$.LC1, (%esp)						movl	$.LC1, (%esp)
-	call	printf							call	printf
-	movl	$0, %eax						movl	$0, %eax
-	addl	$20, %esp						addl	$20, %esp
-	popl	%ecx							popl	%ecx
-	popl	%ebp							popl	%ebp
-	leal	-4(%ecx), %esp						leal	-4(%ecx), %esp
-	ret								ret
-.LFE2:								.LFE2:
-	.size	main, .-main						.size	main, .-main
-.globl __gxx_personality_v0					.globl __gxx_personality_v0
-	.section	.eh_frame,"a",@progbits				.section	.eh_frame,"a",@progbits
-.Lframe1:							.Lframe1:
-	.long	.LECIE1-.LSCIE1						.long	.LECIE1-.LSCIE1
-.LSCIE1:							.LSCIE1:
-	.long	0x0							.long	0x0
-	.byte	0x1							.byte	0x1
-	.string	"zP"							.string	"zP"
-	.uleb128 0x1							.uleb128 0x1
-	.sleb128 -4							.sleb128 -4
-	.byte	0x8							.byte	0x8
-	.uleb128 0x5							.uleb128 0x5
-	.byte	0x0							.byte	0x0
-	.long	__gxx_personality_v0					.long	__gxx_personality_v0
-	.byte	0xc							.byte	0xc
-	.uleb128 0x4							.uleb128 0x4
-	.uleb128 0x4							.uleb128 0x4
-	.byte	0x88							.byte	0x88
-	.uleb128 0x1							.uleb128 0x1
-	.align 4							.align 4
-.LECIE1:							.LECIE1:
-.LSFDE1:							.LSFDE1:
-	.long	.LEFDE1-.LASFDE1					.long	.LEFDE1-.LASFDE1
-.LASFDE1:							.LASFDE1:
-	.long	.LASFDE1-.Lframe1					.long	.LASFDE1-.Lframe1
-	.long	.LFB2							.long	.LFB2
-	.long	.LFE2-.LFB2						.long	.LFE2-.LFB2
-	.uleb128 0x0							.uleb128 0x0
-	.byte	0x4							.byte	0x4
-	.long	.LCFI0-.LFB2						.long	.LCFI0-.LFB2
-	.byte	0xc							.byte	0xc
-	.uleb128 0x1							.uleb128 0x1
-	.uleb128 0x0							.uleb128 0x0
-	.byte	0x9							.byte	0x9
-	.uleb128 0x4							.uleb128 0x4
-	.uleb128 0x1							.uleb128 0x1
-	.byte	0x4							.byte	0x4
-	.long	.LCFI1-.LCFI0						.long	.LCFI1-.LCFI0
-	.byte	0xc							.byte	0xc
-	.uleb128 0x4							.uleb128 0x4
-	.uleb128 0x4							.uleb128 0x4
-	.byte	0x4							.byte	0x4
-	.long	.LCFI2-.LCFI1						.long	.LCFI2-.LCFI1
-	.byte	0xe							.byte	0xe
-	.uleb128 0x8							.uleb128 0x8
-	.byte	0x85							.byte	0x85
-	.uleb128 0x2							.uleb128 0x2
-	.byte	0x4							.byte	0x4
-	.long	.LCFI3-.LCFI2						.long	.LCFI3-.LCFI2
-	.byte	0xd							.byte	0xd
-	.uleb128 0x5							.uleb128 0x5
-	.byte	0x4							.byte	0x4
-	.long	.LCFI4-.LCFI3						.long	.LCFI4-.LCFI3
-	.byte	0x84							.byte	0x84
-	.uleb128 0x3							.uleb128 0x3
-	.align 4							.align 4
-.LEFDE1:							.LEFDE1:
-	.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"		.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"
-	.section	.note.GNU-stack,"",@progbits			.section	.note.GNU-stack,"",@progbits
+2c2
+< 	.section	.rodata.str1.1,"aMS",@progbits,1
+---
+> 	.section	.rodata
+22c22
+< 	subl	$20, %esp
+---
+> 	subl	$36, %esp
+24c24,27
+< 	movl	$-1065151889, 4(%esp)
+---
+> 	fldl	.LC0
+> 	fstpl	-12(%ebp)
+> 	movl	-12(%ebp), %eax
+> 	movl	%eax, 4(%esp)
+28c31
+< 	addl	$20, %esp
+---
+> 	addl	$36, %esp
+35a39,43
+> 	.section	.rodata
+> 	.align 8
+> .LC0:
+> 	.long	-1065151889
+> 	.long	1074340298

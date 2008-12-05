@@ -18,4 +18,4 @@ user	0m0.004s
 sys	0m0.000s
 
 lo cual con 10000 iteraciones del ciclo, no muestra gran cambio en el tiempo de ejecución
-el tamaño del código es el mismo.
+disminuye un poco el tamaño del código.

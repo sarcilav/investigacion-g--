@@ -14,4 +14,4 @@ sys	0m0.000s
 sin la optimización.
 lo que demuestra que esta optimización o bien no prevee el uso de las variables, o quizá se note en compilaciones más extensas.
 
-el tamaño del código no cambia, los dos códigos generados en asembler tienen el mismo número de líneas
+el tamaño del código cambia de aproximadamente 500 líneas a 295 líneas, es un cambio considerable.

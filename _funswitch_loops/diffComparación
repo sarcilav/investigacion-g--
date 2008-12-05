@@ -1,0 +1,43 @@
+	.file	"sample3.cpp"						.file	"sample3.cpp"
+	.text								.text
+	.align 2							.align 2
+.globl main							.globl main
+	.type	main, @function						.type	main, @function
+main:								main:
+.LFB2:								.LFB2:
+	leal	4(%esp), %ecx						leal	4(%esp), %ecx
+.LCFI0:								.LCFI0:
+	andl	$-16, %esp						andl	$-16, %esp
+	pushl	-4(%ecx)						pushl	-4(%ecx)
+.LCFI1:								.LCFI1:
+	pushl	%ebp							pushl	%ebp
+.LCFI2:								.LCFI2:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI3:								.LCFI3:
+	pushl	%ecx							pushl	%ecx
+.LCFI4:								.LCFI4:
+							      >		subl	$16, %esp
+							      >	.LCFI5:
+							      >		movl	$10000, -8(%ebp)
+							      >		movl	$10, -16(%ebp)
+							      >		movl	$0, -20(%ebp)
+							      >		jmp	.L2
+							      >	.L3:
+							      >		movl	-16(%ebp), %eax
+							      >		movl	%eax, -12(%ebp)
+							      >		addl	$1, -20(%ebp)
+							      >	.L2:
+							      >		movl	-20(%ebp), %eax
+							      >		cmpl	-8(%ebp), %eax
+							      >		jl	.L3
+	movl	$0, %eax						movl	$0, %eax
+							      >		addl	$16, %esp
+	popl	%ecx							popl	%ecx
+	popl	%ebp							popl	%ebp
+	leal	-4(%ecx), %esp						leal	-4(%ecx), %esp
+	ret								ret
+.LFE2:								.LFE2:
+	.size	main, .-main						.size	main, .-main
+.globl __gxx_personality_v0					.globl __gxx_personality_v0
+	.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"		.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"
+	.section	.note.GNU-stack,"",@progbits			.section	.note.GNU-stack,"",@progbits

@@ -1,0 +1,38 @@
+8c8
+< 	leal	4(%esp), %eax
+---
+> 	leal	4(%esp), %ecx
+11c11
+< 	pushl	-4(%eax)
+---
+> 	pushl	-4(%ecx)
+17c17
+< 	pushl	%eax
+---
+> 	pushl	%ecx
+19,28c19,30
+< 	movl	$0, arreglo
+< 	movl	$1, arreglo+4
+< 	movl	$2, arreglo+8
+< 	movl	$3, arreglo+12
+< 	movl	$4, arreglo+16
+< 	movl	$5, arreglo+20
+< 	movl	$6, arreglo+24
+< 	movl	$7, arreglo+28
+< 	movl	$8, arreglo+32
+< 	movl	$9, arreglo+36
+---
+> 	subl	$16, %esp
+> .LCFI5:
+> 	movl	$0, -8(%ebp)
+> 	jmp	.L2
+> .L3:
+> 	movl	-8(%ebp), %edx
+> 	movl	-8(%ebp), %eax
+> 	movl	%eax, arreglo(,%edx,4)
+> 	addl	$1, -8(%ebp)
+> .L2:
+> 	cmpl	$9, -8(%ebp)
+> 	jle	.L3
+29a32
+> 	addl	$16, %esp

@@ -1,8 +1,9 @@
 Las insns son la forma como la RTL representa código de las funciones, estas son
 cadenas de objetos doblemente enlazadas, las insns pueden representar diferentes
 cosas, una pueden ser labels para asembler, pueden también representar instrucciones en si,
-o la manera en que se forma un 'switch' (forma de indexarlo me imagino)
+o la manera en que se forma un 'switch'.
 
 lo que hace la optimización es mover de sitio los insns desde la cola de insns a
 una lista donde será más fácil recuperarlos.
 n puede tomar cualquier valor y es equivalente decir -fno- a tomar un n=0.
+

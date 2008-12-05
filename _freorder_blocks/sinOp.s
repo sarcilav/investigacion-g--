@@ -10,6 +10,7 @@ _Z1ai:
 	movl	%esp, %ebp
 .LCFI1:
 	movl	8(%ebp), %eax
+	addl	$1, 8(%ebp)
 	popl	%ebp
 	ret
 .LFE2:
@@ -24,8 +25,8 @@ _Z1bi:
 .LCFI2:
 	movl	%esp, %ebp
 .LCFI3:
+	sall	8(%ebp)
 	movl	8(%ebp), %eax
-	addl	%eax, %eax
 	popl	%ebp
 	ret
 .LFE3:
@@ -45,11 +46,13 @@ _Z1ci:
 	shrl	$30, %eax
 	addl	%edx, %eax
 	sarl	$2, %eax
+	movl	%eax, 8(%ebp)
+	movl	8(%ebp), %eax
 	popl	%ebp
 	ret
 .LFE4:
 	.size	_Z1ci, .-_Z1ci
-	.section	.rodata.str1.1,"aMS",@progbits,1
+	.section	.rodata
 .LC0:
 	.string	"%d"
 	.text
@@ -67,24 +70,27 @@ main:
 .LCFI8:
 	movl	%esp, %ebp
 .LCFI9:
-	pushl	%ebx
-.LCFI10:
 	pushl	%ecx
+.LCFI10:
+	subl	$36, %esp
 .LCFI11:
-	subl	$16, %esp
-.LCFI12:
-	movl	$2, %ebx
-.L8:
-	movl	%ebx, 4(%esp)
+	movl	$10000, -8(%ebp)
+	movl	$0, -12(%ebp)
+	jmp	.L8
+.L9:
+	movl	-12(%ebp), %eax
+	addl	$2, %eax
+	movl	%eax, 4(%esp)
 	movl	$.LC0, (%esp)
 	call	printf
-	addl	$1, %ebx
-	cmpl	$10002, %ebx
-	jne	.L8
+	addl	$1, -12(%ebp)
+.L8:
+	movl	-12(%ebp), %eax
+	cmpl	-8(%ebp), %eax
+	jl	.L9
 	movl	$0, %eax
-	addl	$16, %esp
+	addl	$36, %esp
 	popl	%ecx
-	popl	%ebx
 	popl	%ebp
 	leal	-4(%ecx), %esp
 	ret
@@ -141,10 +147,8 @@ main:
 	.byte	0xd
 	.uleb128 0x5
 	.byte	0x4
-	.long	.LCFI11-.LCFI9
+	.long	.LCFI10-.LCFI9
 	.byte	0x84
-	.uleb128 0x4
-	.byte	0x83
 	.uleb128 0x3
 	.align 4
 .LEFDE7:

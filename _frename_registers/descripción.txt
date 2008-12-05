@@ -1,3 +1,18 @@
 Optimiza el uso de registros del procesador, asegurándose de que no
 quede ningún registro sin utilizarse.
 Es especialmente útil cuando el procesador tiene un mayor número de registros.
+
+
+en tiempos no hace nada.
+real	0m0.003s
+user	0m0.000s
+sys	0m0.000s
+
+-sin-
+real	0m0.003s
+user	0m0.000s
+sys	0m0.000s
+
+
+En tamaño de código si hace mucha diferencia, trabaja de forma similar a -fregmove
+bajando el código de 2113 a aproximadamente 700 líneas. 

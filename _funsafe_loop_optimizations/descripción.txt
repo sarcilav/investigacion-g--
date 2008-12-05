@@ -4,7 +4,7 @@ de que los ciclos no puedan ser infinitos o de que las condiciones de los ciclos
 Aunque esta optimización por si sola no puede determinar si un ciclo va a traer problemas, '-Wunsafe-loop-optimization' indica si
 alguno de los ciclos tiene problema alguno.
 
-NS/NR la -W en los flags determina un 'Warn' (¿?)
+NS/NR la -W en los flags determina un 'Warn'
 
 
 

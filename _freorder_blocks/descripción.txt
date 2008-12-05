@@ -1,6 +1,15 @@
 Esta opción reordena los bloques de funciones de tal forma que cuando
 se pasa a asembler reducir el numero de branches (saltos). Es posible usar con -O2, -O3.
 
-No se encontró un código apropiado para mostrar este tipo de optimización.
+No se encontró un código apropiado para mostrar este tipo de optimización ya que
+no se notan los cambios de optimización en los aspectos que buscamos.
+real	0m0.006s
+user	0m0.004s
+sys	0m0.004s
 
+real	0m0.006s
+user	0m0.004s
+sys	0m0.004s
 
+el tamaño del código varía en aproximadamente 3 líneas, las cuales corresponden a
+cambios de ubicación de las instrucciones.

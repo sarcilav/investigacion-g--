@@ -2,3 +2,14 @@ Encuentra pedazos de código idénticos y los copia a una
 función invocada cada vez que se requiere dicho pedazo de código. Saca 'factor común' de una
 función. Optimiza el tamaño del ejecutable.
 
+con
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+
+sin
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+

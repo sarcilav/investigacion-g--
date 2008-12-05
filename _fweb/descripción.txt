@@ -3,3 +3,15 @@ Eso ayuda a optimizaciones como las loops, CSE, y las que eliminan código muert
 nota: Las variables no se guardan en el registro normal, en el 'home'
 
 la opción -funroll-loops la activa por defecto.
+
+
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.004s
+

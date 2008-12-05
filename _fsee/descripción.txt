@@ -1,2 +1,14 @@
-Mueve unas instrucciones hasta el sitio donde serían más convenientes (no estoy
-seguro cuales) usando un tipo de lcm (mínimo común multiplo???)
+Mueve unas instrucciones hasta el sitio donde serían más convenientes usando una aproximación de tipo de LCM.
+
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+
+Disminuye el tamaño del código considerablemente.

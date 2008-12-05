@@ -1,0 +1,48 @@
+	.file	"sample3.cpp"						.file	"sample3.cpp"
+	.text								.text
+	.align 2							.align 2
+.globl main							.globl main
+	.type	main, @function						.type	main, @function
+main:								main:
+.LFB2:								.LFB2:
+	leal	4(%esp), %eax				      |		leal	4(%esp), %ecx
+.LCFI0:								.LCFI0:
+	andl	$-16, %esp						andl	$-16, %esp
+	pushl	-4(%eax)				      |		pushl	-4(%ecx)
+.LCFI1:								.LCFI1:
+	pushl	%ebp							pushl	%ebp
+.LCFI2:								.LCFI2:
+	movl	%esp, %ebp						movl	%esp, %ebp
+.LCFI3:								.LCFI3:
+	pushl	%eax					      |		pushl	%ecx
+.LCFI4:								.LCFI4:
+	movl	$0, arreglo				      |		subl	$16, %esp
+	movl	$1, arreglo+4				      |	.LCFI5:
+	movl	$2, arreglo+8				      |		movl	$0, -8(%ebp)
+	movl	$3, arreglo+12				      |		jmp	.L2
+	movl	$4, arreglo+16				      |	.L3:
+	movl	$5, arreglo+20				      |		movl	-8(%ebp), %edx
+	movl	$6, arreglo+24				      |		movl	-8(%ebp), %eax
+	movl	$7, arreglo+28				      |		movl	%eax, arreglo(,%edx,4)
+	movl	$8, arreglo+32				      |		addl	$1, -8(%ebp)
+	movl	$9, arreglo+36				      |	.L2:
+							      >		cmpl	$9, -8(%ebp)
+							      >		jle	.L3
+	movl	$0, %eax						movl	$0, %eax
+							      >		addl	$16, %esp
+	popl	%ecx							popl	%ecx
+	popl	%ebp							popl	%ebp
+	leal	-4(%ecx), %esp						leal	-4(%ecx), %esp
+	ret								ret
+.LFE2:								.LFE2:
+	.size	main, .-main						.size	main, .-main
+.globl __gxx_personality_v0					.globl __gxx_personality_v0
+.globl arreglo							.globl arreglo
+	.bss								.bss
+	.align 32							.align 32
+	.type	arreglo, @object					.type	arreglo, @object
+	.size	arreglo, 40						.size	arreglo, 40
+arreglo:							arreglo:
+	.zero	40							.zero	40
+	.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"		.ident	"GCC: (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu3)"
+	.section	.note.GNU-stack,"",@progbits			.section	.note.GNU-stack,"",@progbits
